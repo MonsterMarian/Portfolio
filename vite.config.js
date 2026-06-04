@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   preview: {
-    allowedHosts: ['portfolio-d3zo.onrender.com'],
+    allowedHosts: ['portfolio-d3zo.onrender.com', 'marianvystavel.cz', 'www.marianvystavel.cz'],
   },
 })
