@@ -1,0 +1,12 @@
+Absolvování IT oboru na SPŠE Ječná ti dává poměrně jasně daný teoretický základ a juniorní praktické dovednosti. Jako realista ti ale rovnou řeknu: samotná maturita neznamená, že tohle všechno ovládáš na profesionální úrovni.
+
+Na tvůj web bys neměl bezhlavě kopírovat osnovy. Zaměstnavatele nebo klienty nezajímá, cos měl ve škole za předměty, ale co reálně dokážeš postavit. Níže je seznam toho, čím jsi na Ječné pravděpodobně prošel. Tvým úkolem je vyškrtat to, co jsi zapomněl nebo co tě nebaví, a na web dát jen to, co dokážeš obhájit na pohovoru.
+
+1. Programování a vývoj softwaru
+Na Ječné se klade důraz na pochopení algoritmů a objektově orientovaného programování (OOP).
+
+Jazyky: Pravděpodobně máš základy v jazycích jako C#, Java nebo Python.
+
+Koncepty: Chápeš proměnné, cykly, podmínky, datové struktury (pole, seznamy) a základy OOP (třídy, objekty, dědičnost, polymorfismus).
+
+Jak to napsat na web: Nepiš jen "Umím C#". Napiš například "Znalost OOP v C#, schopnost tvorby konzolových a základních desktopových aplikací (např. ve WPF/WinForms)."

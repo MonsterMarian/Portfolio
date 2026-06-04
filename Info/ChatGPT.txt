@@ -1,0 +1,26 @@
+O mně
+
+Jsem student se zájmem o informační technologie, programování a kybernetickou bezpečnost. Rád pracuji na vlastních projektech, experimentuji s novými technologiemi a hledám praktická řešení reálných problémů.
+
+Oblasti zájmu
+Vývoj webových aplikací
+Kybernetická bezpečnost a OSINT
+Softwarová architektura a UML návrhy
+Automatizace a práce s daty
+Umělá inteligence
+Projekty
+Region Beta Activity Planner – software projekt zaměřený na plánování aktivit v regionu.
+Webové aplikace postavené na technologiích jako Flask.
+Návrh databází, API a UML diagramů pro vlastní systémy.
+Jak pracuji
+Preferuji praktické učení skrze vlastní projekty.
+Zajímá mě nejen programování, ale i návrh systému jako celku.
+Snažím se porozumět tomu, jak technologie fungují pod povrchem, ne jen jak je používat.
+Silné stránky
+Zvědavost a ochota učit se nové věci.
+Samostatnost při řešení technických problémů.
+Schopnost rychle se zorientovat v novém tématu.
+Důraz na praktické výsledky.
+Zajímavost
+
+Často se věnuji projektům i mimo školní povinnosti a hledám způsoby, jak své nápady převést do funkčních aplikací.

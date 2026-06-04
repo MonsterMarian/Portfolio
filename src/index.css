@@ -1,0 +1,795 @@
+/* ═══════════════════════════════════════════════════════════════
+   JOE COLEMAN — OBSIDIAN BRUTALIST EDITION
+   Premium visual design system utilizing OKLCH colors from 
+   brutalist-base.css: obsidian black, warm amber accent, 
+   crisp off-white, and raw high-contrast block borders.
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* ── DESIGN SYSTEM TOKENS ────────────────────────────────────── */
+:root {
+  /* ── Palette from brutalist-base.css (Obsidian Professional) ── */
+  --bg-dark: oklch(7% 0.008 255);       /* Deep Obsidian black */
+  --bg-card: oklch(11% 0.010 255);      /* Dark charcoal card */
+  --bg-card-light: oklch(16% 0.010 255);/* Lighter charcoal surface */
+  --accent-amber: oklch(80% 0.170 72);  /* The special warm amber/yellow accent */
+  --text-light: oklch(94% 0.006 78);    /* Crisp off-white */
+  --text-muted: oklch(56% 0.008 255);   /* Muted gray text */
+  --border-color: #000000;              /* Pure black for high-contrast brutalist borders */
+  
+  --border-width: 4px;
+  --border-width-thin: 2px;
+  --shadow-offset: 8px;
+  --shadow-offset-sm: 4px;
+  
+  --font-sans: 'Outfit', 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+  
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── RESET & BASE ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 1920px) {
+  html { font-size: 19px; }
+}
+
+@media (max-width: 640px) {
+  html { font-size: 13px; }
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+/* ── APP / CONTAINER ────────────────────────────────────────── */
+.app.home {
+  background: var(--bg-dark);
+  background-image: 
+    radial-gradient(var(--bg-card-light) 1.5px, transparent 1.5px),
+    radial-gradient(var(--bg-card-light) 1.5px, var(--bg-dark) 1.5px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  color: var(--text-light);
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  transition: background-color var(--transition-normal);
+  position: relative;
+}
+
+/* ── INVERT / FLASHING STATE (Maximum Slider) ────────────────── */
+.app.home.invert {
+  background-color: var(--accent-amber);
+  background-image: none;
+  color: var(--border-color);
+}
+
+.app.home.invert .content-block__inner {
+  transform: scale(1.02);
+}
+
+.app.home.invert .content-card {
+  background-color: #ffffff;
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+  color: var(--border-color);
+}
+
+.app.home.invert .slider-wrap {
+  background: var(--accent-amber);
+  border-top-color: var(--border-color);
+}
+
+.app.home.invert .site-title a,
+.app.home.invert .menu-open {
+  color: var(--border-color);
+}
+
+.app.home.invert .menu-open::after {
+  background: var(--border-color);
+  box-shadow: 0 0.47em 0 0 var(--border-color), 0 0.95em 0 0 var(--border-color);
+}
+
+.app.home.invert .rangeslider {
+  background: var(--border-color);
+}
+
+.app.home.invert .rangeslider__fill {
+  background: #ffffff;
+}
+
+.app.home.invert .rangeslider__handle {
+  background: var(--bg-dark);
+  border-color: var(--border-color);
+}
+
+.app.home.invert .rangeslider__handle::after {
+  border-left: 2px solid var(--text-light);
+  border-right: 2px solid var(--text-light);
+}
+
+.app.home.invert .slider__scale span {
+  font-weight: 800;
+  text-shadow: none;
+  background-color: #ffffff;
+  color: var(--border-color);
+}
+
+/* ── WRAPPER ────────────────────────────────────────────────── */
+.wrapper {
+  display: block;
+  max-width: 65em;
+  margin: 0 auto;
+  padding: 6.5em 5em 8em;
+  box-sizing: border-box;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .wrapper { padding: 5.5em 2em 7em; }
+}
+
+/* ── SITE HEADER ─────────────────────────────────────────────── */
+.header-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  color: var(--text-light);
+  height: 5em;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.header-main .site-title {
+  position: absolute;
+  top: 1.8em;
+  left: 3.5em;
+  font-size: 1.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  pointer-events: auto;
+}
+
+.header-main .site-title a {
+  border: var(--border-width-thin) solid transparent;
+  padding: 0.3em 0.6em;
+  transition: all var(--transition-fast);
+}
+
+.header-main .site-title a:hover {
+  background-color: var(--accent-amber);
+  color: var(--border-color);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--border-color);
+  transform: translate(-2px, -2px);
+}
+
+/* ── HAMBURGER TOGGLE ───────────────────────────────────────── */
+.header-main .menu-toggle {
+  position: absolute;
+  top: 1.5em;
+  right: 3.5em;
+  width: 2.4em;
+  height: 2.4em;
+  text-indent: 110%;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: auto;
+  border: var(--border-width-thin) solid transparent;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.header-main .menu-open::after {
+  content: '';
+  position: absolute;
+  top: 0.65em;
+  left: 0.4em;
+  width: calc(100% - 0.8em);
+  height: 3px;
+  background: var(--text-light);
+  box-shadow: 0 0.5em 0 0 var(--text-light), 0 1em 0 0 var(--text-light);
+  transition: all var(--transition-fast);
+}
+
+.header-main .menu-toggle:hover {
+  background-color: var(--accent-amber);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--border-color);
+  transform: translate(-2px, -2px);
+}
+
+.header-main .menu-toggle:hover::after {
+  background: var(--border-color);
+  box-shadow: 0 0.5em 0 0 var(--border-color), 0 1em 0 0 var(--border-color);
+}
+
+/* ── MENU CLOSE (X) ────────────────────────────────────────── */
+.header-main .menu-close {
+  transform: translateX(10em);
+  transition: transform var(--transition-normal);
+  z-index: 101;
+}
+
+.header-main .menu-close::before,
+.header-main .menu-close::after {
+  content: '';
+  width: 3px;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -1.5px;
+  background: var(--border-color);
+  transition: background-color var(--transition-fast);
+}
+
+.header-main .menu-close::before { transform: rotate(45deg); }
+.header-main .menu-close::after { transform: rotate(-45deg); }
+
+.header-main .menu-close:hover {
+  background-color: var(--accent-amber);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--border-color);
+  transform: translate(-2px, -2px);
+}
+
+/* ── MENU DRAWER ────────────────────────────────────────────── */
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25em;
+  max-width: 100%;
+  height: 100%;
+  background: var(--accent-amber);
+  color: var(--border-color);
+  padding: 5em 3em;
+  box-sizing: border-box;
+  border-left: var(--border-width) solid var(--border-color);
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-drawer.is-open {
+  transform: translateX(0%);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.4);
+}
+
+.menu-drawer.is-open .menu-close {
+  transform: translateX(0);
+}
+
+.menu-drawer_inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-drawer ul.menu {
+  margin-top: 2em;
+}
+
+.menu-drawer ul.menu li {
+  margin-bottom: 0.8em;
+}
+
+.menu-drawer ul.menu a {
+  font-family: var(--font-sans);
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--border-color);
+  -webkit-text-stroke: 1px var(--border-color);
+  color: transparent;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.menu-drawer ul.menu a:hover {
+  color: var(--border-color);
+  transform: skewX(-10deg) scale(1.05);
+}
+
+.menu-drawer address {
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 1.05em;
+  font-weight: 600;
+  line-height: 1.6;
+  border-top: var(--border-width-thin) dashed var(--border-color);
+  padding-top: 2em;
+  margin-top: auto;
+}
+
+.menu-drawer address a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.menu-drawer address a:hover {
+  color: var(--text-light);
+}
+
+.social-link {
+  display: inline-block;
+  background-color: var(--bg-dark);
+  border: var(--border-width-thin) solid var(--border-color);
+  padding: 0.4em;
+  margin-right: 0.6em;
+  margin-bottom: 1em;
+  box-shadow: 2px 2px 0 var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  background-color: var(--accent-amber);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--border-color);
+}
+
+.social-link:hover .social-icon {
+  filter: invert(0); /* makes black on yellow background */
+}
+
+.social-icon {
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  filter: invert(1); /* makes white on dark background */
+}
+
+/* ── CONTENT BLOCK CARD ──────────────────────────────────────── */
+.content-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-block__inner {
+  width: 100%;
+  perspective: 1000px;
+  transition: transform var(--transition-normal);
+}
+
+.content-card {
+  background-color: var(--bg-card);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: 4px;
+  padding: 3em;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--accent-amber);
+}
+
+#output {
+  text-align: justify;
+  position: relative;
+  width: 100%;
+  font-family: var(--font-serif);
+  font-size: 1.35em;
+  line-height: 1.7;
+  color: var(--text-light);
+  min-height: 10em;
+}
+
+@media (max-width: 768px) {
+  #output { font-size: 1.2em; min-height: 13em; }
+  .content-card { padding: 2em; }
+}
+
+#output .red {
+  color: var(--accent-amber);
+  font-weight: 700;
+}
+
+#output > span {
+  display: block;
+  width: 100%;
+  animation: textReveal 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#output a {
+  color: var(--accent-amber);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+#output a:hover {
+  color: var(--text-light);
+  background-color: rgba(252, 202, 70, 0.15);
+}
+
+#output strong {
+  font-weight: 700;
+}
+
+#output .size-guide {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes textReveal {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SLIDER WRAPPER ──────────────────────────────────────────── */
+.slider-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  padding: 2.2em 5em;
+  background: var(--bg-dark);
+  border-top: var(--border-width) solid var(--border-color);
+  box-sizing: border-box;
+  transition: background-color var(--transition-normal);
+}
+
+@media (max-width: 768px) {
+  .slider-wrap { padding: 1.5em 2em; }
+}
+
+.slider-wrap .slider__scale {
+  padding-top: 1.2em;
+  font-size: 1.1em;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-wrap .slider__scale span {
+  cursor: pointer;
+  background-color: var(--bg-card);
+  border: var(--border-width-thin) solid var(--border-color);
+  padding: 0.4em 0.8em;
+  box-shadow: 2px 2px 0 var(--border-color);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.slider-wrap .slider__scale span:hover {
+  background-color: var(--accent-amber);
+  color: var(--border-color);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--border-color);
+}
+
+.slider-wrap .slider__scale span:active {
+  transform: translate(0, 0);
+  box-shadow: 1px 1px 0 var(--border-color);
+}
+
+/* ── CUSTOM INDUSTRIAL RANGE SLIDER ───────────────────────────── */
+.rangeslider {
+  background: var(--bg-card-light);
+  border: var(--border-width-thin) solid var(--border-color);
+  position: relative;
+  cursor: pointer;
+  touch-action: none;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.rangeslider__fill {
+  background: var(--accent-amber);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  pointer-events: none;
+  transition: width 0.03s linear;
+}
+
+.rangeslider--horizontal {
+  height: 14px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.rangeslider__handle {
+  background: var(--accent-amber);
+  border: var(--border-width-thin) solid var(--border-color);
+  cursor: pointer;
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: -0.6em;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0 var(--border-color);
+  pointer-events: none;
+  transition: left 0.03s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texture pattern on handle */
+.rangeslider__handle::after {
+  content: '';
+  width: 6px;
+  height: 60%;
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+}
+
+.rangeslider:hover .rangeslider__handle {
+  background-color: var(--accent-amber);
+  transform: scale(1.05);
+}
+
+/* ── STICKERS & HOME ANIMATIONS ─────────────────────────────── */
+.home-animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.home-animation {
+  display: none;
+}
+
+.home-animation.is-active {
+  display: block;
+}
+
+.home-animation img {
+  position: absolute;
+  filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8));
+  transition: transform var(--transition-normal);
+}
+
+/* ── Animation 1: Stickers fade + rotate ─────────────────────── */
+.home-animation--1 img {
+  opacity: 0;
+}
+
+.home-animation--1.is-active img:nth-child(1) {
+  animation: stickerShow1 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.home-animation--1.is-active img:nth-child(2) {
+  animation: stickerShow2 0.5s 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes stickerShow1 {
+  from { opacity: 0; transform: scale(0.6) rotate(-15deg); }
+  to   { opacity: 1; transform: scale(1) rotate(-5deg); }
+}
+
+@keyframes stickerShow2 {
+  from { opacity: 0; transform: scale(0.6) rotate(15deg); }
+  to   { opacity: 1; transform: scale(1) rotate(8deg); }
+}
+
+/* ── Animation 2: More stickers ─────────────────────────────── */
+.home-animation--2 img {
+  opacity: 0;
+}
+
+.home-animation--2.is-active img:nth-child(2) {
+  animation: stickerShow1 0.4s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.home-animation--2.is-active img:nth-child(1) {
+  animation: stickerShow2 0.4s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* ── Animation 3: Act Now slides from top ───────────────────── */
+.home-animation--3.is-active img {
+  transform: translate(-50%, -100%);
+  animation: inFromTop 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes inFromTop {
+  from { transform: translate(-50%, -100%) rotate(-2deg); }
+  to   { transform: translate(-50%, 0%) rotate(0deg); }
+}
+
+/* ── Animation 4: Book Me Now from bottom ───────────────────── */
+.home-animation--4.is-active img {
+  transform: translate(-50%, 100%);
+  animation: inFromBottomCentre 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes inFromBottomCentre {
+  from { transform: translate(-50%, 100%) rotate(2deg); }
+  to   { transform: translate(-50%, 0%) rotate(0deg); }
+}
+
+/* ── Animation 5: Dog + Thumbs ──────────────────────────────── */
+.home-animation--5.is-active .dog-phone {
+  transform: translateY(100%);
+  animation: inFromBottom 0.6s 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes inFromBottom {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0%); }
+}
+
+.home-animation--5.is-active .thumbs {
+  transform: translateX(100%);
+  animation: inFromRight 0.8s 0.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes inFromRight {
+  from { transform: translateX(100%) rotate(10deg); }
+  to   { transform: translateY(0%) rotate(0deg); }
+}
+
+/* ── Animation 6: Dancing cat + bulldog ─────────────────────── */
+.home-animation--6.is-active .dancing-cat {
+  transform: translateY(100%);
+  animation: inFromBottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.home-animation--6.is-active .bulldog {
+  opacity: 0;
+  animation: fadeIn 0.5s 0.5s linear forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Animation 7: Wiggling cat + flying plane ───────────────── */
+.home-animation--7 > img {
+  animation: wiggle 0.25s ease-in-out infinite alternate;
+}
+
+@keyframes wiggle {
+  from { transform: rotate(-5deg) translateY(2%); }
+  to   { transform: rotate(5deg) translateY(2%); }
+}
+
+.animation__plane {
+  position: fixed;
+  top: 6em;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 6em);
+  transform: translateX(0);
+  z-index: -1;
+}
+
+.animation__plane img {
+  transform: translate(100%, -50%);
+}
+
+.home-animation--7.is-active .animation__plane {
+  animation: flyBy 3s linear infinite reverse;
+}
+
+.home-animation--7.is-active .animation__plane img {
+  animation: flyByChild 3s linear infinite reverse;
+}
+
+/* ── Animation 8: Dog skateboard ────────────────────────────── */
+.home-animation--8__explosions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.animation__dog-skateboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0);
+}
+
+.animation__dog-skateboard img {
+  transform: translate(100%, -50%);
+}
+
+.home-animation--8.is-active .animation__dog-skateboard {
+  animation: flyBy 4s linear infinite;
+}
+
+.home-animation--8.is-active .animation__dog-skateboard img {
+  animation: flyByChild 4s linear infinite;
+}
+
+@keyframes flyBy {
+  from { transform: translateX(0); }
+  90%  { transform: translateX(-100%); }
+  to   { transform: translateX(-100%); }
+}
+
+@keyframes flyByChild {
+  from { transform: translate(100%, -50%); }
+  90%  { transform: translate(0%, -50%); }
+  to   { transform: translate(0%, -50%); }
+}
+
+/* ── Animation 9: Phone number + bouncing pointer ───────────── */
+.home-animation--9 .pointing {
+  animation: bounce 0.35s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translate(-45%, -15%) rotate(-5deg); }
+  to   { transform: translate(-50%, 5%) rotate(5deg); }
+}
