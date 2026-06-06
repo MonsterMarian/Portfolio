@@ -2,259 +2,259 @@
 // Každý stav obsahuje HTML obsah a volitelný inline CSS
 const states = [
   {
-    html: `Takže, jo, jsem copywriter na volné noze. No a co jako?`,
+    html: `Takže jo, jsem student IT. No a co jako?`,
     css: false
   },
   {
-    html: `Jestli potřebujete copywritera na volné noze, můžete mi zavolat. Nebo taky ne.`,
+    html: `Jestli potřebujete juniora, můžete mi napsat. Nebo taky ne.`,
     css: false
   },
   {
-    html: `Jestli potřebujete copywritera na volné noze, můžete mi zkusit zavolat. Je to celkem na vás.`,
+    html: `Jestli potřebujete juniora, můžete mi zkusit napsat. Je to celkem na vás.`,
     css: false
   },
   {
-    html: `Klidně to ignorujte, ale jestli sháníte copywritera na volné noze, možná bych stál za zkoušku. Myslím, že moje práce je celkem slušná, ale třeba to není úplně váš styl. Posuďte sami.`,
+    html: `Klidně to ignorujte, ale jestli sháníte juniora, možná bych stál za zkoušku. Myslím, že moje projekty jsou celkem slušné, ale třeba to není úplně váš styl. Posuďte sami.`,
     css: false
   },
   {
-    html: `Klidně to ignorujte, ale jestli sháníte celkem <a href="/cv">zkušeného</a> copywritera na volné noze, možná bych stál za zkoušku. Myslím, že moje práce je celkem slušná, ale třeba to není váš styl. Posuďte sami.`,
+    html: `Klidně to ignorujte, ale jestli sháníte celkem <a href="/cv">motivovaného</a> juniora, možná bych stál za zkoušku. Myslím, že moje projekty jsou celkem slušné, ale třeba to není váš styl. Posuďte sami.`,
     css: false
   },
   {
-    html: `Klidně to ignorujte, ale jestli sháníte celkem <a href="/cv">zkušeného</a> copywritera na volné noze, možná bych stál za zkoušku. Moje práce je obvykle celkem slušná a zvládnu většinu věcí od reklamních kampaní po brand booky. Moje kreativní nápady nemůžou být úplně marné, jinak by mě agentury pořád dokola nebookovaly.`,
+    html: `Klidně to ignorujte, ale jestli sháníte celkem <a href="/cv">motivovaného</a> juniora, možná bych stál za zkoušku. Moje projekty jsou obvykle celkem slušné a zvládnu věci od webových aplikací po databázové systémy. Moje technická řešení nemůžou být úplně marná, jinak by mě spolužáci a učitelé pořád neprosili o pomoc.`,
     css: false
   },
   {
-    html: `Jestli sháníte celkem <a href="/cv">zkušeného</a> copywritera na volné noze, možná bych stál za zkoušku. Moje práce je obvykle celkem slušná a zvládnu většinu věcí od reklamních kampaní po brand booky. Moje kreativní nápady nemůžou být úplně marné, jinak by mě agentury pořád dokola nebookovaly.`,
+    html: `Jestli sháníte celkem <a href="/cv">motivovaného</a> juniora, možná bych stál za zkoušku. Moje projekty jsou obvykle celkem slušné a zvládnu věci od webových aplikací po databázové systémy. Moje technická řešení nemůžou být úplně marná, jinak by mě spolužáci a učitelé pořád neprosili o pomoc.`,
     css: false
   },
   {
-    html: `Jestli sháníte celkem <a href="/cv">zkušeného</a> copywritera na volné noze, možná bych stál za zkoušku. Moje práce je dost dobrá a zvládnu většinu věcí od reklamních kampaní po brand booky. Moje kreativní nápady nemůžou být úplně marné, jinak by mě agentury pořád dokola nebookovaly.`,
+    html: `Jestli sháníte celkem <a href="/cv">motivovaného</a> juniora, možná bych stál za zkoušku. Moje projekty jsou dost dobré a zvládnu věci od webových aplikací po databázové systémy. Moje technická řešení nemůžou být úplně marná, jinak by mě lidé kolem pořád neprosili o pomoc.`,
     css: false
   },
   {
-    html: `Jestli sháníte celkem <a href="/cv">zkušeného</a> copywritera na volné noze, možná bych stál za zkoušku. Moje práce je dost dobrá a posbíral jsem i pár <a href="/awards">ocenění</a>. Zvládnu většinu věcí od reklamních kampaní po brand booky. Moje kreativní nápady nemůžou být úplně marné, jinak by mě několik různých <a href="/agencies">agentur</a> nebookovalo stále dokola.`,
+    html: `Jestli sháníte celkem <a href="/cv">motivovaného</a> juniora, možná bych stál za zkoušku. Moje projekty jsou dost dobré a mám za sebou i pár <a href="/projekty">vlastních aplikací</a>. Zvládnu věci od webových aplikací po databázové systémy. Moje technické nápady nemůžou být úplně marné, jinak bych se ve volném čase nepustil do tvorby vlastní <a href="/projekty">neuronové sítě</a>.`,
     css: false
   },
   {
-    html: `Jestli potřebujete <a href="/cv">zkušeného</a> copywritera na volné noze, stojím za zkoušku. Moje práce je dost dobrá a posbíral jsem i pár <a href="/awards">ocenění</a>. Zvládnu většinu věcí od reklamních kampaní po brand booky. Pravidelně mě bookuje celá řada reklamních a designových <a href="/agencies">agentur</a>, takže to asi nebude úplně špatné.`,
+    html: `Jestli potřebujete <a href="/cv">motivovaného</a> juniora, stojím za zkoušku. Moje projekty jsou dost dobré a mám za sebou i pár <a href="/projekty">vlastních aplikací</a>. Zvládnu věci od webových aplikací po databázové návrhy. Ve volném čase stavím vlastní <a href="/projekty">neuronovou síť</a>, takže to asi nebude úplně špatné.`,
     css: false
   },
   {
-    html: `Jestli potřebujete <a href="/cv">zkušeného</a> copywritera na volné noze, stojím za zkoušku. Moje práce je dost dobrá a posbíral jsem i pár <a href="/awards">ocenění</a>. Mám slušnou řádku zkušeností a zvládnu většinu věcí od reklamních kampaní po brand booky. Pravidelně mě bookuje celá řada reklamních a designových <a href="/agencies">agentur</a>, takže to asi nebude úplně špatné.`,
+    html: `Jestli potřebujete <a href="/cv">motivovaného</a> juniora, stojím za zkoušku. Moje projekty jsou dost dobré a mám za sebou i pár <a href="/projekty">vlastních aplikací</a>. Mám slušnou řádku zkušeností a zvládnu věci od webových aplikací po databázové návrhy. Ve volném čase stavím vlastní <a href="/projekty">neuronovou síť</a>, takže to asi nebude úplně špatné.`,
     css: false
   },
   {
-    html: `Jestli potřebujete <a href="/cv">zkušeného</a> copywritera na volné noze, stojím za zkoušku. Moje práce je fakt dobrá a posbíral jsem i pár <a href="/awards">ocenění</a>. Mám slušnou řádku zkušeností a zvládnu většinu věcí od reklamních kampaní po brand booky. Pravidelně mě bookuje široká škála reklamních a designových <a href="/agencies">agentur</a>, takže to se mnou nebude tak hrozné.`,
+    html: `Jestli potřebujete <a href="/cv">motivovaného</a> juniora, stojím za zkoušku. Moje projekty jsou fakt dobré a mám za sebou i pár <a href="/projekty">vlastních aplikací</a>. Mám slušnou řádku zkušeností a zvládnu věci od webových aplikací po databázové návrhy. Studium na SPŠE Ječná mi dalo solidní základ, takže se mnou to nebude tak hrozné.`,
     css: false
   },
   {
-    html: `Jestli potřebujete <a href="/cv">zkušeného</a> copywritera na volné noze, stojím za zkoušku. Moje práce je fakt dobrá a posbíral jsem i pár <a href="/awards">ocenění</a>. Mám za sebou spoustu zkušeností a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s širokou škálou reklamních a designových <a href="/agencies">agentur</a>.`,
+    html: `Jestli potřebujete <a href="/cv">motivovaného</a> juniora, stojím za zkoušku. Moje projekty jsou fakt dobré a mám za sebou i pár <a href="/projekty">vlastních aplikací</a>. Mám za sebou spoustu zkušeností a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým – od vývoje po kybernetickou bezpečnost.`,
     css: false
   },
   {
-    html: `Jestli potřebujete <a href="/cv">zkušeného</a> copywritera na volné noze, stojím za zkoušku. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. Mám za sebou spoustu zkušeností a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s širokou škálou reklamních a designových <a href="/agencies">agentur</a>.`,
+    html: `Jestli potřebujete <a href="/cv">motivovaného</a> juniora, stojím za zkoušku. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám za sebou spoustu zkušeností a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým – od vývoje po kybernetickou bezpečnost a OSINT.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. Mám za sebou spoustu <a href="/cv">zkušeností</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s širokou škálou reklamních a designových <a href="/agencies">agentur</a>.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám za sebou spoustu <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým a pohybuji se v prostoru vývoje, kybernetické bezpečnosti a umělé inteligence.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s několika velmi známými reklamními a designovými <a href="/agencies">agenturami</a>.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým a pohybuji se v prostoru vývoje, kybernetické bezpečnosti a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji se spoustou velmi známých reklamních a designových <a href="/agencies">agentur</a>.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým a pohybuji se v prostoru vývoje, kybernetické bezpečnosti, OSINTu a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým a pohybuji se v prostoru vývoje, kybernetické bezpečnosti, OSINTu a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým a pohybuji se v prostoru vývoje, kybernetické bezpečnosti, OSINTu a strojového učení. Pracuji s některými z nejzajímavějších technologií v oboru.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat nějaká ta <a href="/awards">ocenění</a>. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým a pohybuji se v prostoru vývoje, kybernetické bezpečnosti, OSINTu a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat nějaká ta <a href="/awards">ocenění</a>. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým a pohybuji se v prostoru vývoje, kybernetické bezpečnosti, OSINTu a strojového učení. Záleží mi na tom, aby věci fungovaly – ne jen navenek, ale i pod povrchem.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Každý den dělám na něčem jiném a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. V oboru IT se pohybuji od střední školy a každý den se učím něco nového – od vývoje po kybernetickou bezpečnost a strojové učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu většinu věcí od reklamních kampaní po brand booky. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se učím něco nového – od vývoje po kybernetickou bezpečnost a strojové učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu všechno od reklamních kampaní po brand booky. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a>. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu všechno od reklamních kampaní po brand guidelines. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a> jako Roses. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu všechno od reklamních kampaní po brand guidelines. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po návrhy databázových architektur. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a AI.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a> jako Roses a Clios. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu všechno od reklamních kampaní po brand guidelines. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po návrhy databázových architektur a UML modely. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a AI.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry a sbírat <a href="/awards">ocenění</a> jako D&amp;AD, Clios a Roses. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu všechno od reklamních kampaní po brand guidelines. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy – jako Activity Planner nebo vlastní neuronová síť. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po návrhy databázových architektur. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a AI.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry, budovat skvělé značky a sbírat <a href="/awards">ocenění</a> jako D&amp;AD, Clios a Roses. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu všechno od reklamních kampaní po brand guidelines. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy – jako Region Beta Activity Planner nebo vlastní neuronová síť. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po návrhy databázových architektur. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a AI.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vám pomohou vyhrávat tendry, budovat skvělé značky a sbírat <a href="/awards">ocenění</a> jako D&amp;AD, Clios a Roses. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a zvládnu všechno od reklamních kampaní po brand guidelines. Svůj styl přizpůsobím každé zakázce a spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy – jako Region Beta Activity Planner nebo vlastní neuronová síť. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po návrhy databázových architektur a API. Spolupracuji na projektech, které dávají smysl, a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a AI.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vyhrávají tendry a budují skvělé značky. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a získal jsem přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios a Roses. Svůj styl přizpůsobím každé zakázce a zvládnu všechno od reklamních kampaní po brand guidelines. Spolupracuji s některými z nejlepších reklamních a designových <a href="/agencies">agentur</a> v oboru.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a získal jsem zkušenosti v Javě, C#, Pythonu a JavaScriptu. Zvládnu vše od webových aplikací po návrhy databázových architektur. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a AI.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vyhrávají tendry a budují skvělé značky. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a získal jsem přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios and Roses. Svůj styl přizpůsobím každé zakázce a zvládnu všechno od reklamních kampaní po brand guidelines. Mezi mé klienty patří jedny z nejlepších agentur v zemi, včetně Music a Havas Lynx.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a získal jsem solidní zkušenosti s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po návrhy databázových architektur. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vyhrávají tendry a budují skvělé značky. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a získal jsem přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios and Roses. Svůj styl přizpůsobím každé zakázce a zvládnu všechno od reklamních kampaní po brand guidelines. Spolupracuji s nejlepšími reklamními a designovými <a href="/agencies">agenturami</a> v zemi, včetně Music a Havas Lynx.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a získal jsem více než 3 roky praxe s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po návrhy databázových architektur. Svůj přístup přizpůsobím každému projektu a pohybuji se v oblasti vývoje, kybernetické bezpečnosti a strojového učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vyhrávají tendry a budují skvělé značky. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a získal jsem přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios and Roses. Svůj styl přizpůsobím každé zakázce a zvládnu všechno od reklamních kampaní po brand guidelines. Spolupracuji s nejlepšími reklamními a designovými <a href="/agencies">agenturami</a> v zemi, včetně Music, Havas Lynx a McCanns.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit aplikace a systémy, které reálně fungují. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">projekty</a> sahají od webových aplikací přes vlastní neuronové sítě až po OSINT nástroje. Zvládnu vše od frontendu po databázové návrhy. Svůj přístup přizpůsobím každé spolupráci.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze. Vymýšlím <a href="/portfolio">slova a koncepty</a>, které vyhrávají tendry a budují skvělé značky. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a získal jsem přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios and Roses. Svůj styl přizpůsobím každé zakázce a zvládnu všechno od reklamních kampaní po brand guidelines. Spolupracuji s nejlepšími reklamními a designovými <a href="/agencies">agenturami</a> v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `Ahoj. Jsem copywriter… ne, pardon. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit aplikace a systémy, které reálně fungují. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">projekty</a> sahají od webových aplikací přes vlastní neuronové sítě až po OSINT nástroje. Zvládnu vše od frontendu po databázové návrhy.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem copywriter na volné noze a pomohu vám vyhrávat tendry, sbírat ocenění a budovat skvělé značky. V oboru působím již <a href="/cv">přes 15 let</a> a moje <a href="/portfolio">práce</a> získala přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios a Roses. Svůj styl přizpůsobím každé zakázce a zvládnu vše od ad kampaní po brand guidelines. Spolupracuji s nejlepšími agenturami v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit aplikace a systémy, které reálně fungují. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">projekty</a> sahají od webových aplikací přes vlastní neuronové sítě až po OSINT nástroje. Jsem flexibilní a zvládnu vše od frontendu po databázové návrhy. Zajímá mě, jak věci fungují pod povrchem – ne jen povrchové používání nástrojů.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem copywriter na volné noze, který vám pomůže vyhrát tendry, získat ocenění a vybudovat skvělé značky. V oboru působím již <a href="/cv">přes 15 let</a> a moje <a href="/portfolio">práce</a> získala přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Mezi mé klienty patří nejlepší reklamní a designové <a href="/agencies">agentury</a> v zemi, jako Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže vyřešit technické problémy, postavit funkční aplikace a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">projekty</a> sahají od webových aplikací přes vlastní neuronové sítě až po OSINT nástroje. Jsem flexibilní a zvládnu vše od frontendu po databázové architektury.`,
     css: false
   },
   {
-    html: `<strong>Prvotřídní texty pro reklamu a design s razancí zbraně hromadného ničení.</strong><br>Ahoj. Jsem copywriter na volné noze, který vám pomůže vyhrávat tendry, sbírat ocenění a budovat silné značky. V oboru se pohybuji už <a href="/cv">přes 15 let</a> a moje <a href="/portfolio">práce</a> posbírala přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Přizpůsobím se každé zakázce a zvládnu vše od kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší <a href="/agencies">agentury</a> v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže vyřešit technické problémy, postavit funkční aplikace a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">projekty</a> sahají od webových aplikací přes vlastní neuronové sítě až po OSINT nástroje. Přizpůsobím se každé spolupráci a zvládnu vše od frontendu po databázové architektury. Proto se na mě obracejí lidé, kteří chtějí věci dotáhnout do konce.`,
     css: false
   },
   {
-    html: `<strong>Prvotřídní texty pro reklamu a design s razancí zbraně hromadného ničení.</strong><br>Ahoj. Jsem vysoce <a href="/cv">zkušený</a> copywriter na volné noze, který vám pomůže vyhrávat tendry, sbírat ocenění a budovat silné značky. Moje <a href="/portfolio">práce</a> posbírala přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Přizpůsobím se každé zakázce a zvládnu vše od kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší <a href="/agencies">agentury</a> v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže vyřešit technické problémy, postavit funkční aplikace a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Přizpůsobím se každé spolupráci a zvládnu vše od frontendu po databázové architektury. Proto se na mě obracejí lidé, kteří chtějí věci dotáhnout do konce.`,
     css: false
   },
   {
-    html: `<strong>Prvotřídní texty pro reklamu a design s razancí zbraně hromadného ničení.</strong><br>Ahoj. Jsem vysoce <a href="/cv">zkušený</a> copywriter na volné noze, který vám pomůže vyhrávat tendry, sbírat ocenění a budovat silné značky. Moje <a href="/portfolio">práce</a> posbírala přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem extrémně flexibilní a zvládnu vše od kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší <a href="/agencies">agentury</a> v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. V oboru působím <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Přizpůsobím se každé spolupráci a zvládnu vše od frontendu po databázové architektury. Pracuji přímočaře a bez zbytečného keců.`,
     css: false
   },
   {
-    html: `<strong>Prvotřídní texty pro reklamu a design s razancí zbraně hromadného ničení.</strong><br>Ahoj. Jsem mimořádně <a href="/cv">zkušený</a> copywriter na volné noze, který vám pomůže vyhrávat tendry, sbírat ocenění a budovat silné značky. Moje <a href="/portfolio">práce</a> posbírala přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem extrémně flexibilní a zvládnu vše od kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší <a href="/agencies">agentury</a> v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. V oboru působím <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i návrhy databázových architektur. Přizpůsobím se každé spolupráci. Pracuji přímočaře, analyticky a bez zbytečného keců.`,
     css: false
   },
   {
-    html: `<strong>Chcete vyhrávat tendry, sbírat ocenění a budovat skvělé značky?</strong><br>Samozřejmě, že ano. Tak se ozvěte a zapojte mých 15 let zkušeností z velkých agentur do svých služeb. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší <a href="/agencies">agentury</a> v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem Marian Vystavěl – IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. V oboru působím <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i návrhy databázových architektur. Přizpůsobím se každé spolupráci a pracuji přímočaře a bez zbytečného keců.`,
     css: false
   },
   {
-    html: `<strong>Chcete vyhrávat tendry, sbírat ocenění a budovat skvělé značky?</strong><br>Samozřejmě, že ano. Tak se ozvěte a zapojte mých 15 let prvotřídních zkušeností z nejlepších agentur do svých služeb. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší <a href="/agencies">agentury</a> v zemi, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem vysoce <a href="/cv">motivovaný</a> IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i návrhy databázových architektur. Přizpůsobím se každé spolupráci a pracuji přímočaře.`,
     css: false
   },
   {
-    html: `<strong>Chcete vyhrávat tendry, sbírat ocenění a budovat skvělé značky?</strong><br>Samozřejmě, že ano. Tak se ozvěte hned teď a zapojte mých 15 let prvotřídních zkušeností z nejlepších agentur do svých služeb. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">ocenění</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, včetně Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem mimořádně <a href="/cv">motivovaný</a> IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i návrhy databázových architektur. Jsem extrémně flexibilní a pracuji přímočaře.`,
     css: false
   },
   {
-    html: `<strong>Vyhrávejte tendry. Sbírejte ocenění. Budujte silné značky.</strong><br>Ozvěte se hned teď a získejte mých 15 let zkušeností z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od ad kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns.`,
+    html: `<strong>Chcete postavit funkční aplikaci, vyřešit technický problém nebo rozjet projekt od nuly?</strong><br>Samozřejmě, že ano. Tak se ozvěte a zapojte moje zkušenosti z SPŠE Ječná a vlastních projektů do svých služeb. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě a OSINT nástroje. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po databázové architektury. Proto se na mě obracejí lidé, kteří chtějí věci dotáhnout do konce.`,
     css: false
   },
   {
-    html: `<strong>Vyhrávejte tendry. Sbírejte ocenění. Budujte silné značky.</strong><br>Ozvěte se hned teď a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od ad kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi ještě dnes a zapojte mých 15 let know-how do hry.</strong>`,
+    html: `<strong>Chcete postavit funkční aplikaci, vyřešit technický problém nebo rozjet projekt od nuly?</strong><br>Samozřejmě, že ano. Tak se ozvěte a zapojte moje prvotřídní znalosti z SPŠE Ječná a vlastních projektů do svých služeb. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě a OSINT nástroje. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po databázové architektury. Proto se na mě obracejí lidé, kteří chtějí věci dotáhnout do konce.`,
     css: false
   },
   {
-    html: `<strong>Vyhrávejte tendry. Sbírejte ocenění. Budujte silné značky.</strong><br>Ozvěte se hned teď a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od ad kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a zapojte mých 15 let know-how do hry.</strong>`,
+    html: `<strong>Chcete postavit funkční aplikaci, vyřešit technický problém nebo rozjet projekt od nuly?</strong><br>Samozřejmě, že ano. Tak se ozvěte hned teď a zapojte moje prvotřídní znalosti z SPŠE Ječná a vlastních projektů do svých služeb. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě a OSINT nástroje. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po databázové architektury. Proto se na mě obracejí ti nejlepší.`,
     css: false
   },
   {
-    html: `<strong>Vyhrávejte tendry. Sbírejte ocenění. Budujte silné značky.</strong><br>Ozvěte se HNED TEĎ a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od ad kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED TEĎ a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>Doručuji funkční kód. Řeším reálné problémy. Myslím analyticky.</strong><br>Ozvěte se hned teď a získejte moje technické zkušenosti z vlastních projektů na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od backendu po frontend. Proto se na mě obracejí ti, kteří chtějí výsledky.`,
     css: false
   },
   {
-    html: `<strong>Zarezervujte si mě. Než to udělá vaše konkurenční agentura.</strong><br>Ozvěte se hned a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>Doručuji funkční kód. Řeším reálné problémy. Myslím analyticky.</strong><br>Ozvěte se hned teď a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od backendu po frontend. Proto se na mě obracejí ti, kteří chtějí výsledky. <strong>Napište mi ještě dnes a pojďme rozjet váš projekt.</strong>`,
     css: false
   },
   {
-    html: `<strong>Zarezervujte si mě. Než to udělá vaše konkurenční agentura.</strong><br>Ozvěte se HNED a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>Doručuji funkční kód. Řeším reálné problémy. Myslím analyticky.</strong><br>Ozvěte se hned teď a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od backendu po frontend. Proto se na mě obracejí ti, kteří chtějí výsledky. <strong>Napište mi HNED a pojďme rozjet váš projekt.</strong>`,
     css: false
   },
   {
-    html: `<strong>Zarezervujte si mě. Než to udělá vaše konkurenční agentura.</strong><br>OZVĚTE SE HNED a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>Doručuji funkční kód. Řeším reálné problémy. Myslím analyticky.</strong><br>Ozvěte se HNED TEĎ a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem navíc neuvěřitelně flexibilní a zvládnu cokoli od backendu po frontend. Proto se na mě obracejí ti, kteří chtějí výsledky. <strong>Napište mi HNED TEĎ a získejte moje know-how pro sebe.</strong>`,
     css: false
   },
   {
-    html: `<strong>ZAREZERVUJTE SI MĚ. NEŽ TO UDĚLÁ VAŠE KONKURENČNÍ AGENTURA.</strong><br><strong>OZVĚTE SE HNED TEĎ</strong> a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>Zarezervujte si mě. Než to udělá váš konkurent.</strong><br>Ozvěte se hned a získejte moje technické zkušenosti z vlastních projektů na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">ZAREZERVUJTE SI MĚ. NEŽ TO UDĚLÁ VAŠE KONKURENČNÍ AGENTURA.</strong><br><strong>OZVĚTE SE HNED TEĎ</strong> a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>Zarezervujte si mě. Než to udělá váš konkurent.</strong><br>Ozvěte se HNED a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>OZVĚTE SE HNED TEĎ</strong> a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>Zarezervujte si mě. Než to udělá váš konkurent.</strong><br>OZVĚTE SE HNED a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>OZVĚTE SE HNED TEĎ NA ČÍSLE 730 939 804</strong> a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> vyhrála přes 30 kreativních <a href="/awards">cen</a> včetně D&amp;AD, Design Week, Clios a Roses. Jsem neuvěřitelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong>ZAREZERVUJTE SI MĚ. NEŽ TO UDĚLÁ VÁŠ KONKURENT.</strong><br><strong>OZVĚTE SE HNED TEĎ</strong> a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>OZVĚTE SE HNED TEĎ NA ČÍSLE 730 939 804</strong> a získejte moje zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> prokazatelně vyhrává <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. Je prokazatelně flexibilní a zvládnu vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong class="red">ZAREZERVUJTE SI MĚ. NEŽ TO UDĚLÁ VÁŠ KONKURENT.</strong><br><strong>OZVĚTE SE HNED TEĎ</strong> a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. Moje <a href="/portfolio">práce</a> prokazatelně vyhrává <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. Je prokazatelně flexibilní a zvládne vše od reklamních kampaní po brand guidelines. Proto mě pravidelně bookují nejlepší britské <a href="/agencies">agentury</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED a získejte mých 15 let know-how.</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>OZVĚTE SE HNED TEĎ</strong> a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. PROKÁZANĚ vyhrávám <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. PROKÁZANĚ flexibilní. PROKÁZANĚ úspěšný v nejlepších britských <a href="/agencies">agenturách</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED na číslo 730 939 804 a zapojte mé know-how.</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>OZVĚTE SE HNED TEĎ NA ČÍSLE 730 939 804</strong> a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje a databázové architektury. Jsem neuvěřitelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. PROKÁZANĚ vyhrávám <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. PROKÁZANĚ dělám radost prestižním klientům. PROKÁZANĚ flexibilní. PROKÁZANĚ úspěšný v nejlepších britských <a href="/agencies">agenturách</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. <strong>Zavolejte mi HNED na číslo 730 939 804 a zapojte mé know-how.</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>OZVĚTE SE HNED TEĎ NA ČÍSLE 730 939 804</strong> a získejte moje technické zkušenosti na svou stranu. Moje <a href="/projekty">práce</a> prokazatelně funguje – webové aplikace, neuronové sítě, OSINT nástroje i databázové architektury. Je prokazatelně flexibilní a zvládnu vše od frontendu po backend. Proto se na mě obracejí ti, kteří chtějí věci dotáhnout do konce. <strong>Napište mi HNED a získejte moje know-how.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. PROKÁZANĚ vyhrávám <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. PROKÁZANĚ dělám radost prestižním klientům. PROKÁZANĚ flexibilní. PROKÁZANĚ úspěšný v nejlepších britských <a href="/agencies">agenturách</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. Získejte 15 let know-how pro sebe. <strong>Zavolejte mi HNED na 730 939 804</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte moje technické zkušenosti na svou stranu. PROKAZATELNĚ stavím věci, které fungují – webové aplikace, neuronové sítě, OSINT nástroje, databázové architektury. PROKAZATELNĚ flexibilní. PROKAZATELNĚ orientovaný na výsledky. <strong>Zavolejte mi HNED na číslo 730 939 804 a pojďme na to.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. PROKÁZANĚ vyhrávám <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. PROKÁZANĚ dělám radost prestižním klientům. PROKÁZANĚ flexibilní. PROKÁZANĚ úspěšný v nejlepších britských <a href="/agencies">agenturách</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. Získejte 15 let know-how. <strong><a href="mailto:mvystavel@seznam.cz">Napište mi</a> HNED nebo volejte 730 939 804</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte moje technické zkušenosti na svou stranu. PROKAZATELNĚ stavím věci, které fungují. PROKAZATELNĚ analytický přístup. PROKAZATELNĚ flexibilní. PROKAZATELNĚ orientovaný na výsledky. <strong>Zavolejte mi HNED na číslo 730 939 804 a pojďme na to.</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. PROKÁZANĚ vyhrávám <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. PROKÁZANĚ dělám radost prestižním klientům. PROKÁZANĚ flexibilní. PROKÁZANĚ úspěšný v nejlepších britských <a href="/agencies">agenturách</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. Poražte konkurenci a získejte termín: <strong><a href="mailto:mvystavel@seznam.cz">napište mi</a> HNED nebo volejte 730 939 804</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte moje technické zkušenosti na svou stranu. PROKAZATELNĚ stavím věci, které fungují. PROKAZATELNĚ analytický přístup. PROKAZATELNĚ flexibilní. PROKAZATELNĚ orientovaný na výsledky. Získejte moje know-how pro sebe. <strong>Zavolejte mi HNED na 730 939 804</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. PROKÁZANĚ vyhrávám <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. PROKÁZANĚ dělám radost prestižním klientům. PROKÁZANĚ flexibilní. PROKÁZANĚ úspěšný v nejlepších britských <a href="/agencies">agenturách</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. Poražte konkurenci a <strong class="red"><a href="mailto:mvystavel@seznam.cz">napište mi</a> HNED nebo volejte 730 939 804</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte moje technické zkušenosti na svou stranu. PROKAZATELNĚ stavím věci, které fungují. PROKAZATELNĚ analytický přístup. PROKAZATELNĚ flexibilní. PROKAZATELNĚ orientovaný na výsledky. Porazte konkurenci a získejte termín: <strong><a href="mailto:mvystavel@seznam.cz">napište mi</a> HNED nebo volejte 730 939 804</strong>`,
     css: false
   },
   {
-    html: `<strong class="red">AGENTURA, PROTI KTERÉ STOJÍTE V TENDRU, BY SI MĚ MOHLA NAJMOUT.<br>RISKNETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte mé zkušenosti z velkých agentur na svou stranu. PROKÁZANĚ vyhrávám <a href="/awards">ocenění</a>, včetně D&amp;AD, Design Week, Clios a Roses. PROKÁZANĚ dělám radost prestižním klientům. PROKÁZANĚ flexibilní. PROKÁZANĚ úspěšný v nejlepších britských <a href="/agencies">agenturách</a>, jako Music, Havas Lynx, B&amp;W Studio a McCanns. JEDNEJTE HNED a vyfoukněte ten termín své konkurenci. <strong class="red"><a href="mailto:mvystavel@seznam.cz">Napište mi</a> HNED nebo volejte 730 939 804</strong>`,
+    html: `<strong class="red">FIRMA, SE KTEROU SOUTĚŽÍTE O ZAKÁZKU, BY SI MĚ MOHLA NAJMOUT.<br>RISKUJETE TO?</strong><br><strong>KONTAKTUJTE MĚ HNED NA ČÍSLE 730 939 804</strong> a získejte moje technické zkušenosti na svou stranu. PROKAZATELNĚ stavím věci, které fungují. PROKAZATELNĚ analytický přístup. PROKAZATELNĚ flexibilní. PROKAZATELNĚ orientovaný na výsledky. JEDNEJTE HNED a vyfoukněte ten termín své konkurenci. <strong class="red"><a href="mailto:mvystavel@seznam.cz">Napište mi</a> HNED nebo volejte 730 939 804</strong>`,
     css: false
   }
 ];
