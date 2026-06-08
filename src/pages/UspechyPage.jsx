@@ -18,12 +18,7 @@ function UspechyPage() {
       popis: 'Implementace neuronové sítě od nuly v Pythonu bez použití ML frameworků — čistá matematika a backpropagation.',
       tag: 'AI & ML'
     },
-    {
-      rok: '2024',
-      nazev: 'OSINT nástroje',
-      popis: 'Sada vlastních nástrojů pro open-source zpravodajství a analýzu dat z veřejných zdrojů.',
-      tag: 'Bezpečnost'
-    },
+
     {
       rok: '2023',
       nazev: 'Full-stack webové aplikace',
