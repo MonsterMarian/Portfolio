@@ -1,6 +1,12 @@
 function UspechyPage() {
   const uspechy = [
     {
+      rok: '2026',
+      nazev: 'SPŠE Ječná — maturita',
+      popis: 'Úspěšné zakončení studia na Střední průmyslové škole elektrotechnické Ječná v Praze.',
+      tag: 'Vzdělání'
+    },
+    {
       rok: '2024',
       nazev: 'Region Beta Activity Planner',
       popis: 'Vývoj komplexní aplikace pro plánování akcí s vlastní databázovou architekturou a REST API.',
@@ -17,12 +23,6 @@ function UspechyPage() {
       nazev: 'OSINT nástroje',
       popis: 'Sada vlastních nástrojů pro open-source zpravodajství a analýzu dat z veřejných zdrojů.',
       tag: 'Bezpečnost'
-    },
-    {
-      rok: '2024',
-      nazev: 'SPŠE Ječná — maturita',
-      popis: 'Úspěšné zakončení studia na Střední průmyslové škole elektrotechnické Ječná v Praze.',
-      tag: 'Vzdělání'
     },
     {
       rok: '2023',
