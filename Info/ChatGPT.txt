@@ -4,7 +4,7 @@ Jsem student se zájmem o informační technologie, programování a kybernetick
 
 Oblasti zájmu
 Vývoj webových aplikací
-Kybernetická bezpečnost a OSINT
+Kybernetická bezpečnost, automatizace a analýza
 Softwarová architektura a UML návrhy
 Automatizace a práce s daty
 Umělá inteligence
