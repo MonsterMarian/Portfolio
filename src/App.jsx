@@ -11,7 +11,6 @@ import states from './data/states'
 import GithubPage from './pages/GithubPage'
 import UspechyPage from './pages/UspechyPage'
 import ProjektyPage from './pages/ProjektyPage'
-import MapaPage from './pages/MapaPage'
 import GaleriePage from './pages/GaleriePage'
 
 const DEFAULT_POSITION = 31;
@@ -119,7 +118,6 @@ function App() {
         <Route path="/github" element={<GithubPage />} />
         <Route path="/uspechy" element={<UspechyPage />} />
         <Route path="/projekty" element={<ProjektyPage />} />
-        <Route path="/projekty/mapa" element={<MapaPage />} />
         <Route path="/projekty/galerie" element={<GaleriePage />} />
       </Routes>
     </div>

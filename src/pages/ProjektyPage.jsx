@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 
 const projekty = [
   {
@@ -40,12 +40,8 @@ function ProjektyPage() {
     <div className="page page--projekty">
       <div className="page__wrapper">
         <div className="page__header">
-          <h1>Projekty</h1>
+          <h1>Zasobník Projektů</h1>
           <p className="page__subtitle">Věci, které jsem postavil</p>
-          <div className="page__subnav">
-            <Link to="/projekty/mapa" className="page__subnav-link">→ Mapa projektů</Link>
-            <Link to="/projekty/galerie" className="page__subnav-link">→ Galerie</Link>
-          </div>
         </div>
         <div className="page__content">
           <div className="projekty-grid">

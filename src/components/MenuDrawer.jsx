@@ -53,17 +53,12 @@ function MenuDrawer({ isOpen, onClose }) {
           </li>
           <li>
             <Link to="/projekty" className={isActive('/projekty') ? 'is-current' : ''} onClick={onClose}>
-              Projekty
+              Zasobník Projektů
             </Link>
           </li>
-          <li className="menu__sub">
-            <Link to="/projekty/mapa" className={isActive('/projekty/mapa') ? 'is-current' : ''} onClick={onClose}>
-              Mapa
-            </Link>
-          </li>
-          <li className="menu__sub">
+          <li>
             <Link to="/projekty/galerie" className={isActive('/projekty/galerie') ? 'is-current' : ''} onClick={onClose}>
-              Galerie
+              Galerie Projektů
             </Link>
           </li>
         </ul>
