@@ -1,19 +1,54 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
-const galerie = [
-  { id: 1, nazev: 'Region Beta Activity Planner', tech: 'Java · SQL', barva: '#fcca46', emoji: '🗓️', url: 'https://regionbeta.onrender.com/' },
-  { id: 2, nazev: 'Neuronová síť', tech: 'Python · NumPy', barva: '#a855f7', emoji: '🧠', url: 'https://github.com/MonsterMarian' },
-  { id: 3, nazev: 'OSINT Toolkit', tech: 'Python · APIs', barva: '#22d3ee', emoji: '🔍', url: 'https://github.com/MonsterMarian' },
-  { id: 4, nazev: 'Portfolio web', tech: 'React · Vite', barva: '#fcca46', emoji: '💼', url: 'https://github.com/MonsterMarian/Portfolio' },
-  { id: 5, nazev: 'Connect 5 AI', tech: 'JS · Minimax', barva: '#f97316', emoji: '🎮', url: '/projects/connect5/index.html' },
-  { id: 6, nazev: 'Poker Simulator', tech: 'JS · Statistics', barva: '#ec4899', emoji: '🃏', url: '/projects/poker/index.html' },
-  { id: 7, nazev: 'Web Kapely', tech: 'HTML · CSS · JS', barva: '#10b981', emoji: '🎸', url: '/projects/kapela/index.html' },
+const projekty = [
+  {
+    id: 4,
+    nazev: 'Portfolio web',
+    tech: ['React', 'Vite', 'CSS'],
+    popis: 'Tato stránka. Inspirována getcoleman.com — slider s 64 texty, animace, dark brutalist design.',
+    github: 'https://github.com/MonsterMarian/Portfolio',
+    datum: '06 / 2026',
+    komentar: 'Můj osobní portfoliový web. Chtěl jsem vytvořit neotřelý design s netradičním ovládáním a plynulými animacemi, které zaujmou na první pohled.'
+  },
+  {
+    id: 1,
+    nazev: 'Region Beta Activity Planner',
+    tech: ['Java', 'SQL', 'REST API'],
+    popis: 'Webová aplikace pro správu a plánování akcí. Vlastní databázová architektura, autentizace uživatelů, REST API.',
+    github: 'https://regionbeta.onrender.com/',
+    datum: '12 / 2024',
+    komentar: 'Moje první velká webová aplikace v Javě. Zde jsem se naučil základy relačních databází, návrhové vzory a jak postavit robustní backend API.'
+  },
+  {
+    id: 5,
+    nazev: 'Connect 5 AI',
+    tech: ['JavaScript', 'HTML5', 'CSS3'],
+    popis: 'Interaktivní hra Piškvorky (Connect 5) s počítačovým protihráčem poháněným algoritmem Minimax a alfa-beta prořezáváním.',
+    github: '/projects/connect5/index.html',
+    datum: '08 / 2024',
+    komentar: 'Tento projekt mě velmi bavil, protože jsem si mohl v praxi vyzkoušet teorii her a optimalizaci vyhledávacího stromu v JavaScriptu.'
+  },
+  {
+    id: 6,
+    nazev: 'Poker Simulator',
+    tech: ['JavaScript', 'HTML5', 'CSS3'],
+    popis: 'Simulátor náhodných pokerových hand s pokročilou statistickou analýzou pravděpodobností kombinací v Texas Hold\'em.',
+    github: '/projects/poker/index.html',
+    datum: '04 / 2024',
+    komentar: 'Zaměřeno na matematické simulace a výpočty pravděpodobností. Užitečné pro pochopení chování náhody na velkém vzorku dat.'
+  },
+  {
+    id: 7,
+    nazev: 'Web Kapely',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    popis: 'Moderní a responzivní webová prezentace pro hudební skupinu obsahující informace o kapele, koncertech a e-shopu.',
+    github: '/projects/kapela/index.html',
+    datum: '09 / 2023',
+    komentar: 'Můj první reálný projekt pro klienta. Kladl jsem velký důraz na čistý kód bez frameworků a responzivní zobrazení na všech typech zařízení.'
+  }
 ];
 
 function GaleriePage() {
-  const [aktivni, setAktivni] = useState(null);
-
   return (
     <div className="page page--galerie">
       <div className="page__wrapper">
@@ -23,26 +58,27 @@ function GaleriePage() {
           <p className="page__subtitle">Vizuální přehled projektů</p>
         </div>
         <div className="page__content">
-          <div className="galerie-grid">
-            {galerie.map((item) => (
-              <div
-                key={item.id}
-                className={`galerie-item ${aktivni === item.id ? 'galerie-item--active' : ''}`}
-                style={{ '--item-color': item.barva }}
-                onClick={() => setAktivni(aktivni === item.id ? null : item.id)}
-              >
-                <div className="galerie-item__emoji">{item.emoji}</div>
-                <div className="galerie-item__info">
-                  <h2 className="galerie-item__title">{item.nazev}</h2>
-                  <span className="galerie-item__tech">{item.tech}</span>
-                </div>
-                {aktivni === item.id && (
-                  <div className="galerie-item__overlay">
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                      {item.url.includes('github.com') ? 'Zobrazit na GitHubu' : 'Otevřít projekt'} →
-                    </a>
+          <div className="projekt-stack-list">
+            {projekty.map((p) => (
+              <div key={p.id} className="projekt-stack-card">
+                <div className="projekt-stack-card__date">{p.datum}</div>
+                <div className="projekt-stack-card__body">
+                  <div className="projekt-stack-card__tech">
+                    {p.tech.map((t) => (
+                      <span key={t} className="projekt-stack-card__tech-tag">{t}</span>
+                    ))}
                   </div>
-                )}
+                  <h2 className="projekt-stack-card__title">{p.nazev}</h2>
+                  <p className="projekt-stack-card__desc">{p.popis}</p>
+                  {p.komentar && (
+                    <div className="projekt-stack-card__comment">
+                      <strong>Komentář:</strong> <em>{p.komentar}</em>
+                    </div>
+                  )}
+                  <a href={p.github} target="_blank" rel="noopener noreferrer" className="projekt-stack-card__link">
+                    {p.github.includes('github.com') ? 'GitHub' : 'Otevřít projekt'} →
+                  </a>
+                </div>
               </div>
             ))}
           </div>
