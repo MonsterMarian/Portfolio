@@ -6,7 +6,7 @@ const projekty = [
     nazev: 'Region Beta Activity Planner',
     tech: ['Java', 'SQL', 'REST API'],
     popis: 'Webová aplikace pro správu a plánování akcí. Vlastní databázová architektura, autentizace uživatelů, REST API.',
-    github: 'https://github.com/MonsterMarian',
+    github: 'https://regionbeta.onrender.com/',
     barva: '#fcca46'
   },
   {
@@ -84,7 +84,7 @@ function ProjektyPage() {
                 </div>
                 <p className="projekt-card__desc">{p.popis}</p>
                 <a href={p.github} target="_blank" rel="noopener noreferrer" className="projekt-card__link">
-                  {p.github.startsWith('http') ? 'GitHub' : 'Otevřít projekt'} →
+                  {p.github.includes('github.com') ? 'GitHub' : 'Otevřít projekt'} →
                 </a>
               </div>
             ))}

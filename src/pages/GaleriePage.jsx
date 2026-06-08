@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const galerie = [
-  { id: 1, nazev: 'Region Beta Activity Planner', tech: 'Java · SQL', barva: '#fcca46', emoji: '🗓️', url: 'https://github.com/MonsterMarian' },
+  { id: 1, nazev: 'Region Beta Activity Planner', tech: 'Java · SQL', barva: '#fcca46', emoji: '🗓️', url: 'https://regionbeta.onrender.com/' },
   { id: 2, nazev: 'Neuronová síť', tech: 'Python · NumPy', barva: '#a855f7', emoji: '🧠', url: 'https://github.com/MonsterMarian' },
   { id: 3, nazev: 'OSINT Toolkit', tech: 'Python · APIs', barva: '#22d3ee', emoji: '🔍', url: 'https://github.com/MonsterMarian' },
   { id: 4, nazev: 'Portfolio web', tech: 'React · Vite', barva: '#fcca46', emoji: '💼', url: 'https://github.com/MonsterMarian/Portfolio' },
@@ -39,7 +39,7 @@ function GaleriePage() {
                 {aktivni === item.id && (
                   <div className="galerie-item__overlay">
                     <a href={item.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                      {item.url.startsWith('http') ? 'Zobrazit na GitHubu' : 'Otevřít projekt'} →
+                      {item.url.includes('github.com') ? 'Zobrazit na GitHubu' : 'Otevřít projekt'} →
                     </a>
                   </div>
                 )}
