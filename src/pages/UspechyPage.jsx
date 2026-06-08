@@ -7,23 +7,10 @@ function UspechyPage() {
       tag: 'Vzdělání'
     },
     {
-      rok: '2024',
+      rok: '2026',
       nazev: 'Region Beta Activity Planner',
       popis: 'Vývoj komplexní aplikace pro plánování akcí s vlastní databázovou architekturou a REST API.',
       tag: 'Projekt'
-    },
-    {
-      rok: '2024',
-      nazev: 'Vlastní neuronová síť',
-      popis: 'Implementace neuronové sítě od nuly v Pythonu bez použití ML frameworků — čistá matematika a backpropagation.',
-      tag: 'AI & ML'
-    },
-
-    {
-      rok: '2023',
-      nazev: 'Full-stack webové aplikace',
-      popis: 'Navržení a implementace více webových aplikací zahrnujících frontend, backend i databázovou vrstvu.',
-      tag: 'Vývoj'
     },
   ];
 
