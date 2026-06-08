@@ -17,8 +17,8 @@ function GaleriePage() {
     <div className="page page--galerie">
       <div className="page__wrapper">
         <div className="page__header">
-          <Link to="/projekty" className="page__back">← Zasobník Projektů</Link>
-          <h1>Galerie Projektů</h1>
+          <Link to="/projekty" className="page__back">← Projekty</Link>
+          <h1>Galerie</h1>
           <p className="page__subtitle">Vizuální přehled projektů</p>
         </div>
         <div className="page__content">
