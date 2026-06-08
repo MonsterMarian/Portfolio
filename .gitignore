@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Exclude individual projects (not part of portfolio app)
+Projects/

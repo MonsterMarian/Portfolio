@@ -601,122 +601,143 @@ a {
 }
 
 .home-animation {
-  display: none;
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .home-animation.is-active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .home-animation img {
   position: absolute;
   filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8));
-  transition: transform var(--transition-normal);
+  /* Added opacity and transform to the base transition for smooth exits */
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ── Animation 1: Stickers fade + rotate ─────────────────────── */
-.home-animation--1 img {
+.home-animation--1 img:nth-child(1) {
   opacity: 0;
+  transform: scale(0.6) rotate(-15deg) translateY(20px);
+}
+.home-animation--1 img:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.6) rotate(15deg) translateY(20px);
 }
 
 .home-animation--1.is-active img:nth-child(1) {
-  animation: stickerShow1 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 1;
+  transform: scale(1) rotate(-5deg) translateY(0);
+  transition: all 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .home-animation--1.is-active img:nth-child(2) {
-  animation: stickerShow2 0.5s 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-@keyframes stickerShow1 {
-  from { opacity: 0; transform: scale(0.6) rotate(-15deg); }
-  to   { opacity: 1; transform: scale(1) rotate(-5deg); }
-}
-
-@keyframes stickerShow2 {
-  from { opacity: 0; transform: scale(0.6) rotate(15deg); }
-  to   { opacity: 1; transform: scale(1) rotate(8deg); }
+  opacity: 1;
+  transform: scale(1) rotate(8deg) translateY(0);
+  transition: all 0.5s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* ── Animation 2: More stickers ─────────────────────────────── */
-.home-animation--2 img {
+.home-animation--2 img:nth-child(1) {
   opacity: 0;
+  transform: scale(0.6) rotate(-15deg) translateY(20px);
+}
+.home-animation--2 img:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.6) rotate(15deg) translateY(20px);
 }
 
 .home-animation--2.is-active img:nth-child(2) {
-  animation: stickerShow1 0.4s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 1;
+  transform: scale(1) rotate(-5deg) translateY(0);
+  transition: all 0.5s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .home-animation--2.is-active img:nth-child(1) {
-  animation: stickerShow2 0.4s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 1;
+  transform: scale(1) rotate(8deg) translateY(0);
+  transition: all 0.5s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* ── Animation 3: Act Now slides from top ───────────────────── */
-.home-animation--3.is-active img {
-  transform: translate(-50%, -100%);
-  animation: inFromTop 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.home-animation--3 img {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-5deg);
 }
 
-@keyframes inFromTop {
-  from { transform: translate(-50%, -100%) rotate(-2deg); }
-  to   { transform: translate(-50%, 0%) rotate(0deg); }
+.home-animation--3.is-active img {
+  opacity: 1;
+  transform: translate(-50%, 0%) rotate(0deg);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ── Animation 4: Book Me Now from bottom ───────────────────── */
-.home-animation--4.is-active img {
-  transform: translate(-50%, 100%);
-  animation: inFromBottomCentre 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.home-animation--4 img {
+  opacity: 0;
+  transform: translate(-50%, 50%) rotate(5deg);
 }
 
-@keyframes inFromBottomCentre {
-  from { transform: translate(-50%, 100%) rotate(2deg); }
-  to   { transform: translate(-50%, 0%) rotate(0deg); }
+.home-animation--4.is-active img {
+  opacity: 1;
+  transform: translate(-50%, 0%) rotate(0deg);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ── Animation 5: Dog + Thumbs ──────────────────────────────── */
+.home-animation--5 .dog-phone {
+  opacity: 0;
+  transform: translateY(30%);
+}
 .home-animation--5.is-active .dog-phone {
-  transform: translateY(100%);
-  animation: inFromBottom 0.6s 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 0.6s 0.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes inFromBottom {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0%); }
+.home-animation--5 .thumbs {
+  opacity: 0;
+  transform: translateX(30%) rotate(10deg);
 }
-
 .home-animation--5.is-active .thumbs {
-  transform: translateX(100%);
-  animation: inFromRight 0.8s 0.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes inFromRight {
-  from { transform: translateX(100%) rotate(10deg); }
-  to   { transform: translateY(0%) rotate(0deg); }
+  opacity: 1;
+  transform: translateX(0%) rotate(0deg);
+  transition: all 0.7s 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ── Animation 6: Dancing cat + bulldog ─────────────────────── */
-.home-animation--6.is-active .dancing-cat {
-  transform: translateY(100%);
-  animation: inFromBottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-.home-animation--6.is-active .bulldog {
+.home-animation--6 .dancing-cat {
   opacity: 0;
-  animation: fadeIn 0.5s 0.5s linear forwards;
+  transform: translateY(50%);
+}
+.home-animation--6.is-active .dancing-cat {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 0.5s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to   { opacity: 1; transform: scale(1); }
+.home-animation--6 .bulldog {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+}
+.home-animation--6.is-active .bulldog {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: all 0.6s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* ── Animation 7: Wiggling cat + flying plane ───────────────── */
 .home-animation--7 > img {
-  animation: wiggle 0.25s ease-in-out infinite alternate;
+  animation: wiggle 0.5s ease-in-out infinite alternate;
 }
 
 @keyframes wiggle {
-  from { transform: rotate(-5deg) translateY(2%); }
-  to   { transform: rotate(5deg) translateY(2%); }
+  from { transform: rotate(-3deg) translateY(1%); }
+  to   { transform: rotate(3deg) translateY(-1%); }
 }
 
 .animation__plane {
@@ -727,6 +748,8 @@ a {
   height: calc(100% - 6em);
   transform: translateX(0);
   z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .animation__plane img {
@@ -734,11 +757,12 @@ a {
 }
 
 .home-animation--7.is-active .animation__plane {
-  animation: flyBy 3s linear infinite reverse;
+  opacity: 1;
+  animation: flyBy 5s linear infinite reverse;
 }
 
 .home-animation--7.is-active .animation__plane img {
-  animation: flyByChild 3s linear infinite reverse;
+  animation: flyByChild 5s linear infinite reverse;
 }
 
 /* ── Animation 8: Dog skateboard ────────────────────────────── */
@@ -758,6 +782,8 @@ a {
   width: 100%;
   height: 100%;
   transform: translateX(0);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .animation__dog-skateboard img {
@@ -765,6 +791,7 @@ a {
 }
 
 .home-animation--8.is-active .animation__dog-skateboard {
+  opacity: 1;
   animation: flyBy 4s linear infinite;
 }
 
@@ -785,11 +812,26 @@ a {
 }
 
 /* ── Animation 9: Phone number + bouncing pointer ───────────── */
-.home-animation--9 .pointing {
-  animation: bounce 0.35s ease-in-out infinite alternate;
+.home-animation--9 img {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-@keyframes bounce {
+.home-animation--9.is-active img.center-xy {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.home-animation--9.is-active img.pointing {
+  opacity: 1;
+  animation: bouncePointer 0.4s ease-in-out infinite alternate;
+  animation-delay: 0.5s; /* Wait for entry animation */
+  /* Initial pop in */
+  transition: opacity 0.5s 0.2s ease;
+}
+
+@keyframes bouncePointer {
   from { transform: translate(-45%, -15%) rotate(-5deg); }
   to   { transform: translate(-50%, 5%) rotate(5deg); }
 }
