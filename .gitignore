@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Exclude individual projects (not part of portfolio app)
-Projects/
+/Projects/

@@ -33,6 +33,30 @@ const projekty = [
     github: 'https://github.com/MonsterMarian/Portfolio',
     barva: '#fcca46'
   },
+  {
+    id: 5,
+    nazev: 'Connect 5 AI',
+    tech: ['JavaScript', 'HTML5', 'CSS3'],
+    popis: 'Interaktivní hra Piškvorky (Connect 5) s počítačovým protihráčem poháněným algoritmem Minimax a alfa-beta prořezáváním.',
+    github: '/projects/connect5/index.html',
+    barva: '#f97316'
+  },
+  {
+    id: 6,
+    nazev: 'Poker Simulator',
+    tech: ['JavaScript', 'HTML5', 'CSS3'],
+    popis: 'Simulátor náhodných pokerových hand s pokročilou statistickou analýzou pravděpodobností kombinací v Texas Hold\'em.',
+    github: '/projects/poker/index.html',
+    barva: '#ec4899'
+  },
+  {
+    id: 7,
+    nazev: 'Web Kapely',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    popis: 'Moderní a responzivní webová prezentace pro hudební skupinu obsahující informace o kapele, koncertech a e-shopu.',
+    github: '/projects/kapela/index.html',
+    barva: '#10b981'
+  }
 ];
 
 function ProjektyPage() {
@@ -60,7 +84,7 @@ function ProjektyPage() {
                 </div>
                 <p className="projekt-card__desc">{p.popis}</p>
                 <a href={p.github} target="_blank" rel="noopener noreferrer" className="projekt-card__link">
-                  GitHub →
+                  {p.github.startsWith('http') ? 'GitHub' : 'Otevřít projekt'} →
                 </a>
               </div>
             ))}
