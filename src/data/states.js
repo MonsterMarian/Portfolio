@@ -2,7 +2,7 @@
 // Každý stav mění vždy jen malou část textu — stejně jako na getcoleman.com
 const states = [
   {
-    html: `Takže jo, jsem student IT. No a co jako?`,
+    html: `Takže jo, jsem junior developer. No a co jako?`,
     css: false
   },
   {
@@ -58,99 +58,99 @@ const states = [
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Moje <a href="/projekty">projekty</a> jsou fakt dobré a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje po bezpečnost.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Moje <a href="/projekty">projekty</a> jsou fakt dobré a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje po bezpečnost.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje po bezpečnost.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje po bezpečnost.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po databázové návrhy. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám slušnou řádku <a href="/cv">zkušeností</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Každý den se zabývám něčím novým — od vývoje, přes kybernetiku, po strojové učení.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Mám bohaté <a href="/cv">zkušenosti</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu věci od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každému projektu.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každé spolupráci.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po vlastní databázové architektury. Svůj přístup přizpůsobím každé spolupráci.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po databázové architektury a API. Svůj přístup přizpůsobím každé spolupráci.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po databázové architektury a API. Svůj přístup přizpůsobím každé spolupráci.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po databázové architektury a API. Proto se na mě obracejí spolužáci i lidé mimo školu.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a zvládnu vše od webových aplikací po databázové architektury a API. Proto se na mě obracejí spolužáci i lidé mimo školu.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a získal jsem zkušenosti s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po databázové architektury. Proto se na mě obracejí spolužáci i lidé mimo školu.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a mám zkušenosti s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po databázové architektury. Proto se na mě obracejí spolužáci i lidé mimo školu.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a mám solidní zkušenosti s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po databázové architektury. Proto se na mě obracejí spolužáci i lidé mimo školu.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a mám solidní zkušenosti s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po databázové architektury. Proto se na mě obracejí spolužáci i lidé mimo školu.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. V oboru se pohybuji <a href="/cv">od střední školy</a> a mám solidní zkušenosti s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po databázové architektury. Pracuji přímočaře a bez zbytečného keců.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer. Stavím <a href="/projekty">aplikace a systémy</a>, které reálně fungují a řeší skutečné problémy. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a mám solidní zkušenosti s Javou, C#, Pythonem a JavaScriptem. Zvládnu vše od webových aplikací po databázové architektury. Pracuji přímočaře a bez zbytečného keců.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit funkční aplikace a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Zvládnu vše od webových aplikací po databázové architektury. Pracuji přímočaře a bez zbytečného keců.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer, který vám pomůže postavit funkční aplikace a rozjet projekty od nuly. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Zvládnu vše od webových aplikací po databázové architektury. Pracuji přímočaře a bez zbytečného keců.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit funkční aplikace a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Zvládnu vše od frontendu po databázové architektury. Pracuji přímočaře a analyticky.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer, který vám pomůže postavit funkční aplikace a rozjet projekty od nuly. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Zvládnu vše od frontendu po databázové architektury. Pracuji přímočaře a analyticky.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Zvládnu vše od frontendu po databázové architektury. Pracuji přímočaře a analyticky.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Zvládnu vše od frontendu po databázové architektury. Pracuji přímočaře a analyticky.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Jsem flexibilní a zvládnu vše od frontendu po databázové architektury. Pracuji přímočaře a analyticky.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě i OSINT nástroje. Jsem flexibilní a zvládnu vše od frontendu po databázové architektury. Pracuji přímočaře a analyticky.`,
     css: false
   },
   {
-    html: `Ahoj. Jsem Marian Vystavěl. Jsem IT student a junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend. Pracuji přímočaře a analyticky.`,
+    html: `Ahoj. Jsem Marian Vystavěl. Jsem junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend. Pracuji přímočaře a analyticky.`,
     css: false
   },
   {
-    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem Marian Vystavěl – IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. V oboru se pohybuji <a href="/cv">od střední školy</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend.`,
+    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem Marian Vystavěl – junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Vystudoval jsem <a href="/cv">SPŠE Ječná</a> a moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend.`,
     css: false
   },
   {
-    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem Marian Vystavěl – IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend.`,
+    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem Marian Vystavěl – junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend.`,
     css: false
   },
   {
-    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem vysoce <a href="/cv">motivovaný</a> IT junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend.`,
+    html: `<strong>Prvotřídní kód. Analytické myšlení. Přímočará komunikace.</strong><br>Ahoj. Jsem vysoce <a href="/cv">motivovaný</a> junior developer, který vám pomůže postavit funkční aplikace, vyřešit technické problémy a rozjet projekty od nuly. Moje <a href="/projekty">práce</a> zahrnuje webové aplikace, vlastní neuronové sítě, OSINT nástroje i databázové architektury. Jsem flexibilní a zvládnu vše od frontendu po backend.`,
     css: false
   },
   {
