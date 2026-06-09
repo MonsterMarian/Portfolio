@@ -1,15 +1,15 @@
-/* ═══════════════════════════════════════════════════════════════
-   JOE COLEMAN — OBSIDIAN BRUTALIST EDITION
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   JOE COLEMAN â€” OBSIDIAN BRUTALIST EDITION
    Premium visual design system utilizing OKLCH colors from 
    brutalist-base.css: obsidian black, warm amber accent, 
    crisp off-white, and raw high-contrast block borders.
-   ═══════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap");
 
-/* ── DESIGN SYSTEM TOKENS ────────────────────────────────────── */
+/* â”€â”€ DESIGN SYSTEM TOKENS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
-  /* ── Palette from brutalist-base.css (Obsidian Professional) ── */
+  /* â”€â”€ Palette from brutalist-base.css (Obsidian Professional) â”€â”€ */
   --bg-dark: oklch(7% 0.008 255);       /* Deep Obsidian black */
   --bg-card: oklch(11% 0.010 255);      /* Dark charcoal card */
   --bg-card-light: oklch(16% 0.010 255);/* Lighter charcoal surface */
@@ -30,7 +30,7 @@
   --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── RESET & BASE ───────────────────────────────────────────── */
+/* â”€â”€ RESET & BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -45,7 +45,7 @@ body, html {
   font-family: var(--font-sans);
 }
 
-/* Scroll jen na home stránce zakázán (slider je fixed dole) */
+/* Scroll jen na home strĂˇnce zakĂˇzĂˇn (slider je fixed dole) */
 body:has(.app.home) {
   overflow: hidden;
 }
@@ -79,7 +79,7 @@ a {
   transition: color var(--transition-fast);
 }
 
-/* ── APP / CONTAINER ────────────────────────────────────────── */
+/* â”€â”€ APP / CONTAINER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .app.home {
   background: var(--bg-dark);
   background-image: 
@@ -95,7 +95,7 @@ a {
   position: relative;
 }
 
-/* ── INVERT / FLASHING STATE (Maximum Slider) ────────────────── */
+/* â”€â”€ INVERT / FLASHING STATE (Maximum Slider) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .app.home.invert {
   background-color: var(--accent-amber);
   background-image: none;
@@ -153,7 +153,7 @@ a {
   color: var(--border-color);
 }
 
-/* ── WRAPPER ────────────────────────────────────────────────── */
+/* â”€â”€ WRAPPER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .wrapper {
   display: block;
   max-width: 65em;
@@ -173,7 +173,7 @@ a {
   .wrapper { padding: 5.5em 2em 7em; }
 }
 
-/* ── SITE HEADER ─────────────────────────────────────────────── */
+/* â”€â”€ SITE HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .header-main {
   position: fixed;
   top: 0;
@@ -211,7 +211,7 @@ a {
   transform: translate(-2px, -2px);
 }
 
-/* ── HAMBURGER TOGGLE ───────────────────────────────────────── */
+/* â”€â”€ HAMBURGER TOGGLE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .header-main .menu-toggle {
   position: absolute;
   top: 1.5em;
@@ -251,7 +251,7 @@ a {
   box-shadow: 0 0.5em 0 0 var(--border-color), 0 1em 0 0 var(--border-color);
 }
 
-/* ── MENU CLOSE (X) ────────────────────────────────────────── */
+/* â”€â”€ MENU CLOSE (X) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .header-main .menu-close {
   transform: translateX(10em);
   transition: transform var(--transition-normal);
@@ -281,7 +281,7 @@ a {
   transform: translate(-2px, -2px);
 }
 
-/* ── MENU DRAWER ────────────────────────────────────────────── */
+/* â”€â”€ MENU DRAWER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .menu-drawer {
   position: fixed;
   top: 0;
@@ -390,7 +390,7 @@ a {
   filter: invert(1); /* makes white on dark background */
 }
 
-/* ── CONTENT BLOCK CARD ──────────────────────────────────────── */
+/* â”€â”€ CONTENT BLOCK CARD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .content-block {
   width: 100%;
   display: flex;
@@ -483,7 +483,7 @@ a {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── SLIDER WRAPPER ──────────────────────────────────────────── */
+/* â”€â”€ SLIDER WRAPPER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .slider-wrap {
   position: fixed;
   bottom: 0;
@@ -534,7 +534,7 @@ a {
   box-shadow: 1px 1px 0 var(--border-color);
 }
 
-/* ── CUSTOM INDUSTRIAL RANGE SLIDER ───────────────────────────── */
+/* â”€â”€ CUSTOM INDUSTRIAL RANGE SLIDER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .rangeslider {
   background: var(--bg-card-light);
   border: var(--border-width-thin) solid var(--border-color);
@@ -592,7 +592,7 @@ a {
   transform: scale(1.05);
 }
 
-/* ── STICKERS & HOME ANIMATIONS ─────────────────────────────── */
+/* â”€â”€ STICKERS & HOME ANIMATIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animations {
   position: absolute;
   top: 0;
@@ -626,7 +626,7 @@ a {
   transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Animation 1: Stickers fade + rotate ─────────────────────── */
+/* â”€â”€ Animation 1: Stickers fade + rotate â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--1 img:nth-child(1) {
   opacity: 0;
   transform: scale(0.6) rotate(-15deg) translateY(20px);
@@ -647,7 +647,7 @@ a {
   transition: all 0.5s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ── Animation 2: More stickers ─────────────────────────────── */
+/* â”€â”€ Animation 2: More stickers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--2 img:nth-child(1) {
   opacity: 0;
   transform: scale(0.6) rotate(-15deg) translateY(20px);
@@ -668,7 +668,7 @@ a {
   transition: all 0.5s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ── Animation 3: Act Now slides from top ───────────────────── */
+/* â”€â”€ Animation 3: Act Now slides from top â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--3 img {
   opacity: 0;
   transform: translate(-50%, -50%) rotate(-5deg);
@@ -680,7 +680,7 @@ a {
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Animation 4: Book Me Now from bottom ───────────────────── */
+/* â”€â”€ Animation 4: Book Me Now from bottom â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--4 img {
   opacity: 0;
   transform: translate(-50%, 50%) rotate(5deg);
@@ -692,7 +692,7 @@ a {
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Animation 5: Dog + Thumbs ──────────────────────────────── */
+/* â”€â”€ Animation 5: Dog + Thumbs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--5 .dog-phone {
   opacity: 0;
   transform: translateY(30%);
@@ -713,7 +713,7 @@ a {
   transition: all 0.7s 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Animation 6: Dancing cat + bulldog ─────────────────────── */
+/* â”€â”€ Animation 6: Dancing cat + bulldog â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--6 .dancing-cat {
   opacity: 0;
   transform: translateY(50%);
@@ -734,7 +734,7 @@ a {
   transition: all 0.6s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ── Animation 7: Wiggling cat + flying plane ───────────────── */
+/* â”€â”€ Animation 7: Wiggling cat + flying plane â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--7 > img {
   animation: wiggle 0.5s ease-in-out infinite alternate;
 }
@@ -769,7 +769,7 @@ a {
   animation: flyByChild 5s linear infinite reverse;
 }
 
-/* ── Animation 8: Dog skateboard ────────────────────────────── */
+/* â”€â”€ Animation 8: Dog skateboard â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--8__explosions {
   position: absolute;
   top: 0;
@@ -815,7 +815,7 @@ a {
   to   { transform: translate(0%, -50%); }
 }
 
-/* ── Animation 9: Phone number + bouncing pointer ───────────── */
+/* â”€â”€ Animation 9: Phone number + bouncing pointer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .home-animation--9 img {
   opacity: 0;
   transform: translateY(30px);
@@ -840,7 +840,7 @@ a {
   to   { transform: translate(-50%, 5%) rotate(5deg); }
 }
 
-/* ── MENU CLOSE BUTTON (krizek) ────────────────────────────── */
+/* â”€â”€ MENU CLOSE BUTTON (krizek) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .menu-close {
   position: absolute;
   top: 1.5em;
@@ -867,12 +867,12 @@ a {
   transform: rotate(90deg);
 }
 
-/* ── MENU SUB-ITEMS ─────────────────────────────────────────── */
+/* â”€â”€ MENU SUB-ITEMS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .menu-drawer ul.menu li.menu__sub { margin-left: 1.5em; }
 .menu-drawer ul.menu li.menu__sub a { font-size: 1.3em; opacity: 0.75; }
 .menu-drawer ul.menu li.menu__sub a:hover { opacity: 1; }
 
-/* ── PAGE BASE ──────────────────────────────────────────────── */
+/* â”€â”€ PAGE BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .page { min-height: 100vh; background: var(--bg-dark); color: var(--text-light); padding-top: 5em; }
 .page__wrapper { max-width: 65em; margin: 0 auto; padding: 3em 5em 6em; }
 @media (max-width: 768px) { .page__wrapper { padding: 2em 2em 4em; } }
@@ -885,7 +885,7 @@ a {
 .page__subnav-link { color: var(--accent-amber); font-weight: 700; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.05em; border: 2px solid var(--accent-amber); padding: 0.4em 0.8em; transition: all var(--transition-fast); }
 .page__subnav-link:hover { background: var(--accent-amber); color: #000; transform: translate(-2px,-2px); box-shadow: 4px 4px 0 #000; }
 
-/* ── GITHUB PAGE ────────────────────────────────────────────── */
+/* â”€â”€ GITHUB PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .github-cta { display: flex; align-items: center; gap: 1em; background: var(--bg-card); border: 4px solid #000; padding: 1.5em 2em; margin-bottom: 3em; box-shadow: 8px 8px 0 #000; font-size: 1.3em; font-weight: 700; text-transform: uppercase; color: var(--text-light); transition: all var(--transition-fast); }
 .github-cta:hover { background: var(--accent-amber); color: #000; transform: translate(-3px,-3px); box-shadow: 11px 11px 0 #000; }
 .github-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10em, 1fr)); gap: 1em; }
@@ -893,7 +893,7 @@ a {
 .github-stat-card__number { font-size: 2em; font-weight: 800; color: var(--accent-amber); }
 .github-stat-card__label { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
 
-/* ── USPECHY PAGE ───────────────────────────────────────────── */
+/* â”€â”€ USPECHY PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .uspechy-list { display: flex; flex-direction: column; gap: 1.5em; }
 .uspech-card { display: grid; grid-template-columns: 5em 1fr; background: var(--bg-card); border: 4px solid #000; box-shadow: 8px 8px 0 #000; transition: all var(--transition-fast); }
 .uspech-card:hover { transform: translate(-3px,-3px); box-shadow: 11px 11px 0 #000; }
@@ -903,7 +903,7 @@ a {
 .uspech-card__title { font-size: 1.2em; margin: 0 0 0.4em; font-weight: 800; }
 .uspech-card__desc { color: var(--text-muted); font-family: var(--font-serif); line-height: 1.6; font-size: 0.95em; margin: 0; }
 
-/* ── PROJEKTY PAGE (ZÁSOBNÍK / STACK) ───────────────────────── */
+/* â”€â”€ PROJEKTY PAGE (ZĂSOBNĂŤK / STACK) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .projekt-stack-list { display: flex; flex-direction: column; gap: 1.5em; }
 .projekt-stack-card { display: grid; grid-template-columns: 6.5em 1fr; background: var(--bg-card); border: 4px solid #000; box-shadow: 8px 8px 0 #000; transition: all var(--transition-fast); }
 .projekt-stack-card:hover { transform: translate(-3px,-3px); box-shadow: 11px 11px 0 #000; }
@@ -918,7 +918,7 @@ a {
 .projekt-stack-card__link { color: var(--accent-amber); font-weight: 700; font-size: 0.9em; text-transform: uppercase; align-self: flex-start; transition: all var(--transition-fast); margin-top: 0.2em; }
 .projekt-stack-card__link:hover { text-decoration: underline; transform: translateX(4px); }
 
-/* ── MAPA PAGE ──────────────────────────────────────────────── */
+/* â”€â”€ MAPA PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .mapa-container { margin-bottom: 3em; }
 .mapa-placeholder { background: var(--bg-card); border: 4px solid #000; box-shadow: 8px 8px 0 #000; padding: 4em 2em; text-align: center; }
 .mapa-placeholder__icon { font-size: 4em; margin-bottom: 0.5em; }
@@ -932,3 +932,186 @@ a {
 .mapa-lokace-item p { color: var(--text-muted); margin: 0; font-family: var(--font-serif); font-style: italic; }
 
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SIDEBAR E â€” "DIAGONAL SLASH"
+   VelkĂ˝ ĹˇikmĂ˝ amber blok vlevo. TmavĂ© pozadĂ­. ObĹ™Ă­
+   typografie se skewem. Velmi vĂ˝raznĂ˝ a dynamickĂ˝.
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.mde {
+  position: fixed;
+  top: 0; right: 0;
+  width: 24em;
+  max-width: 100%;
+  height: 100%;
+  background: oklch(7% 0.008 255);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  box-shadow: -12px 0 40px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+.mde--open { transform: translateX(0); }
+
+/* Ĺ ikmĂ˝ amber blok â€” dekorativnĂ­ */
+.mde__accent {
+  position: absolute;
+  top: -4em;
+  right: -2em;
+  width: 8em;
+  height: 16em;
+  background: var(--accent-amber);
+  transform: rotate(12deg);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mde__head {
+  position: relative;
+  z-index: 1;
+  padding: 1.5em 1.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.mde__logo {
+  font-size: 1.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--accent-amber);
+}
+.mde__close {
+  width: 2.2em; height: 2.2em;
+  background: none;
+  border: 2px solid rgba(255,255,255,0.15);
+  color: var(--text-muted);
+  font-size: 1em;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--transition-fast);
+  border-radius: 2px;
+}
+.mde__close:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  transform: rotate(90deg);
+}
+
+/* Nav E â€” velkĂˇ ĹˇikmĂˇ typografie */
+.mde__nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 0 1em 2em;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+.mde__item {
+  display: block;
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  padding: 0.25em 0;
+  opacity: 0.35;
+  transform: skewX(-2deg);
+  transition: all 0.12s ease;
+  position: relative;
+}
+/* hover â€” plnĂ˝ + jemnĂ˝ skew + amber */
+.mde__item:hover {
+  opacity: 1;
+  color: var(--accent-amber);
+  transform: skewX(-5deg) translateX(6px);
+}
+.mde__item--active {
+  opacity: 1;
+  color: var(--text-light);
+}
+.mde__item--active::before {
+  content: 'â–¶';
+  font-size: 0.35em;
+  color: var(--accent-amber);
+  position: absolute;
+  left: -1em;
+  top: 50%;
+  transform: translateY(-50%) skewX(5deg);
+}
+
+/* Sub items E â€” menĹˇĂ­, bez skewu */
+.mde__sub {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 0 0.5em 1.2em;
+  gap: 0;
+  border-left: 2px solid rgba(255,255,255,0.08);
+  margin-left: 0.2em;
+  margin-top: 0.1em;
+}
+.mde__sub-item {
+  text-decoration: none;
+  color: oklch(42% 0.008 255);
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35em 0.8em;
+  transition: all var(--transition-fast);
+  transform: none;
+}
+.mde__sub-item:hover {
+  color: var(--accent-amber);
+  padding-left: 1.2em;
+}
+.mde__sub-item--active {
+  color: var(--accent-amber);
+}
+
+/* Footer E â€” stejnĂ˝ styl jako D */
+.mde__footer {
+  position: relative;
+  z-index: 1;
+  padding: 1.2em 1.5em;
+  border-top: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.mde__socials { display: flex; gap: 0.6em; }
+.mde__social {
+  width: 2.2em; height: 2.2em;
+  background: var(--bg-card-light);
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 0 var(--border-color);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  color: var(--text-light);
+  transition: all var(--transition-fast);
+}
+.mde__social:hover {
+  background: var(--accent-amber);
+  color: #000;
+  transform: translate(-2px,-2px);
+  box-shadow: 4px 4px 0 var(--border-color);
+}
+.mde__address {
+  font-style: normal;
+  font-size: 0.78em;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+.mde__address a { color: var(--accent-amber); text-decoration: underline; }
+.mde__address a:hover { color: var(--text-light); }

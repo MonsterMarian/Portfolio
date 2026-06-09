@@ -4,7 +4,7 @@ import Header from './components/Header'
 import HomeAnimations from './components/HomeAnimations'
 import ContentBlock from './components/ContentBlock'
 import SliderWrap from './components/SliderWrap'
-import MenuDrawer from './components/MenuDrawer'
+import MenuDrawerE from './components/MenuDrawerE'
 import states from './data/states'
 
 // Pages
@@ -91,10 +91,7 @@ function App() {
         menuOpen={menuOpen}
         onMenuToggle={() => setMenuOpen(!menuOpen)}
       />
-      <MenuDrawer
-        isOpen={menuOpen}
-        onClose={() => setMenuOpen(false)}
-      />
+      <MenuDrawerE isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       <Routes>
         <Route path="/" element={
           <main className="wrapper" id="main-content">
