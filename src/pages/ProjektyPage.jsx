@@ -16,7 +16,7 @@ const projekty = [
     tech: ['Java', 'SQL', 'REST API'],
     popis: 'Webová aplikace pro správu a plánování akcí. Vlastní databázová architektura, autentizace uživatelů, REST API.',
     github: 'https://regionbeta.onrender.com/',
-    datum: '12 / 2024',
+    datum: '4-5 / 2026',
     komentar: 'Moje první velká webová aplikace v Javě. Zde jsem se naučil základy relačních databází, návrhové vzory a jak postavit robustní backend API.'
   },
   {
