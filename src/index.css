@@ -1,4 +1,4 @@
-﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    JOE COLEMAN â€” OBSIDIAN BRUTALIST EDITION
    Premium visual design system utilizing OKLCH colors from 
    brutalist-base.css: obsidian black, warm amber accent, 
@@ -1039,15 +1039,6 @@ a {
 .mde__item--active {
   opacity: 1;
   color: var(--text-light);
-}
-.mde__item--active::before {
-  content: 'â–¶';
-  font-size: 0.35em;
-  color: var(--accent-amber);
-  position: absolute;
-  left: -1em;
-  top: 50%;
-  transform: translateY(-50%) skewX(5deg);
 }
 
 /* Sub items E â€” menĹˇĂ­, bez skewu */
