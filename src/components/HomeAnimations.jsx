@@ -6,7 +6,7 @@ function HomeAnimations({ activeAnimation, sliderValue, maxSlider }) {
   const showDancingCat = sliderValue === maxSlider - 3;
 
   return (
-    <div className="home-animations" id="home-animations">
+    <div className="home-animations" id="home-animations" style={{ pointerEvents: 'none' }}>
       {/* Animation 1 — Stickers: 15 let + držitel ocenění */}
       <div className={`home-animation home-animation--1 ${activeAnimation === 1 ? 'is-active' : ''}`}>
         <img src="/images/15-years.png" style={{ top: '33%', left: '15%', width: '15%', height: 'auto' }} alt="15 let zkušeností" />
@@ -59,9 +59,9 @@ function HomeAnimations({ activeAnimation, sliderValue, maxSlider }) {
       </div>
 
       {/* Animation 9 — Telefonní číslo + ukazující ruka */}
-      <div className={`home-animation home-animation--9 ${activeAnimation === 9 ? 'is-active' : ''}`} style={{ zIndex: 9999 }}>
-        <img src="/images/phone-number.png" style={{ top: '50%', left: '50%', width: '90%', height: 'auto', zIndex: 9999 }} className="center-xy" alt="Telefonní číslo" />
-        <img src="/images/pointing-hand.png" style={{ top: '-10%', left: '75%', width: 'auto', height: '40%', zIndex: 9999 }} className="center-x pointing" alt="Ukazující ruka" />
+      <div className={`home-animation home-animation--9 ${activeAnimation === 9 ? 'is-active' : ''}`}>
+        <img src="/images/phone-number.png" style={{ top: '50%', left: '50%', width: '90%', height: 'auto' }} className="center-xy" alt="Telefonní číslo" />
+        <img src="/images/pointing-hand.png" style={{ top: '-10%', left: '75%', width: 'auto', height: '40%' }} className="center-x pointing" alt="Ukazující ruka" />
       </div>
 
       {/* Explosion overlay pro předposlední stav */}
