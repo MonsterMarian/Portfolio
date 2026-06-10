@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import HomeAnimations from './components/HomeAnimations'
@@ -21,6 +21,8 @@ function App() {
     return saved !== null ? parseInt(saved, 10) : DEFAULT_POSITION;
   });
   const [menuOpen, setMenuOpen] = useState(false);
+  const appRef = useRef(null);
+  const invertIntervalRef = useRef(null);
   const location = useLocation();
 
   const maxSlider = states.length - 1;
@@ -58,7 +60,27 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [maxSlider]);
 
-  const isMax = sliderValue === maxSlider;
+  // Blikání na max — přímá DOM manipulace, žádný React re-render
+  useEffect(() => {
+    const el = appRef.current;
+    if (!el) return;
+    if (sliderValue === maxSlider) {
+      el.classList.add('invert');
+      let on = true;
+      invertIntervalRef.current = setInterval(() => {
+        on = !on;
+        el.classList.toggle('invert', on);
+      }, 250);
+    } else {
+      el.classList.remove('invert');
+      clearInterval(invertIntervalRef.current);
+      invertIntervalRef.current = null;
+    }
+    return () => {
+      clearInterval(invertIntervalRef.current);
+      invertIntervalRef.current = null;
+    };
+  }, [sliderValue, maxSlider]);
 
   const remaining = states.length - sliderValue;
   const activeAnimation = remaining <= 9 ? 10 - remaining : 0;
@@ -68,7 +90,7 @@ function App() {
   const isHome = location.pathname === '/';
 
   return (
-    <div className={isHome ? `app home${isMax ? ' is-max' : ''}` : 'app'} id="app-root">
+    <div ref={appRef} className={isHome ? 'app home' : 'app'} id="app-root">
       <Header
         menuOpen={menuOpen}
         onMenuToggle={() => setMenuOpen(!menuOpen)}
