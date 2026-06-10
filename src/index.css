@@ -574,7 +574,7 @@ a {
   top: -0.6em;
   border-radius: 4px;
   box-shadow: 3px 3px 0 var(--border-color);
-  pointer-events: none;
+  pointer-events: auto;
   transition: left 0.03s linear;
   display: flex;
   align-items: center;

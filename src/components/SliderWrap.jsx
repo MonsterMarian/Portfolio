@@ -2,34 +2,58 @@ import { useRef, useCallback, useEffect, useState } from 'react';
 
 function SliderWrap({ value, max, onChange }) {
   const trackRef = useRef(null);
-  const isDragging = useRef(false);
+  const handleRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   const getValueFromPosition = useCallback((clientX) => {
     const track = trackRef.current;
     if (!track) return value;
     const rect = track.getBoundingClientRect();
-    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    
+    // Width of the handle (1.8em) in pixels
+    const handleWidth = handleRef.current ? handleRef.current.offsetWidth : 28.8;
+    const activeWidth = rect.width - handleWidth;
+    
+    if (activeWidth <= 0) return 0;
+    
+    // clientX relative to the active track area (center-to-center)
+    const relativeX = clientX - rect.left - handleWidth / 2;
+    const ratio = Math.max(0, Math.min(1, relativeX / activeWidth));
     return Math.round(ratio * max);
   }, [max, value]);
 
   const handlePointerDown = useCallback((e) => {
-    isDragging.current = true;
-    e.currentTarget.setPointerCapture(e.pointerId);
+    // Only handle primary button clicks (left click / touch)
+    if (e.button !== 0 && e.button !== undefined) return;
+    
+    setIsDragging(true);
     const newVal = getValueFromPosition(e.clientX);
     onChange(newVal);
   }, [getValueFromPosition, onChange]);
 
-  const handlePointerMove = useCallback((e) => {
-    if (!isDragging.current) return;
-    const newVal = getValueFromPosition(e.clientX);
-    onChange(newVal);
-  }, [getValueFromPosition, onChange]);
+  // Window pointer event listeners for dragging
+  useEffect(() => {
+    if (!isDragging) return;
 
-  const handlePointerUp = useCallback(() => {
-    isDragging.current = false;
-  }, []);
+    const handlePointerMove = (e) => {
+      const newVal = getValueFromPosition(e.clientX);
+      onChange(newVal);
+    };
 
-  const fillPercent = max > 0 ? (value / max) * 100 : 0;
+    const handlePointerUp = () => {
+      setIsDragging(false);
+    };
+
+    window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerup', handlePointerUp);
+    window.addEventListener('pointercancel', handlePointerUp);
+
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+      window.removeEventListener('pointercancel', handlePointerUp);
+    };
+  }, [isDragging, getValueFromPosition, onChange]);
 
   const handleLessSell = useCallback(() => {
     onChange(value - 1);
@@ -39,16 +63,15 @@ function SliderWrap({ value, max, onChange }) {
     onChange(value + 1);
   }, [value, onChange]);
 
+  const ratio = max > 0 ? value / max : 0;
+  const fillPercent = ratio * 100;
+
   return (
     <div className="slider-wrap" id="slider-wrap">
-      {/* Custom range slider */}
       <div
         className="rangeslider rangeslider--horizontal"
         ref={trackRef}
         onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        onPointerCancel={handlePointerUp}
         role="slider"
         aria-valuemin={0}
         aria-valuemax={max}
@@ -58,7 +81,11 @@ function SliderWrap({ value, max, onChange }) {
         id="hard-sell-slider"
       >
         <div className="rangeslider__fill" style={{ width: `${fillPercent}%` }} />
-        <div className="rangeslider__handle" style={{ left: `calc(${fillPercent}% - 0.5em)` }} />
+        <div
+          className="rangeslider__handle"
+          ref={handleRef}
+          style={{ left: `calc(${fillPercent}% - ${ratio * 1.8}em)` }}
+        />
       </div>
       <div className="slider__scale">
         <span
