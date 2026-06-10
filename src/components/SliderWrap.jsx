@@ -26,10 +26,23 @@ function SliderWrap({ value, max, onChange }) {
     // Only handle primary button clicks (left click / touch)
     if (e.button !== 0 && e.button !== undefined) return;
     
+    e.preventDefault();
     setIsDragging(true);
     const newVal = getValueFromPosition(e.clientX);
     onChange(newVal);
   }, [getValueFromPosition, onChange]);
+
+  // Manage body class for preventing text selection during drag
+  useEffect(() => {
+    if (isDragging) {
+      document.body.classList.add('is-dragging');
+    } else {
+      document.body.classList.remove('is-dragging');
+    }
+    return () => {
+      document.body.classList.remove('is-dragging');
+    };
+  }, [isDragging]);
 
   // Window pointer event listeners for dragging
   useEffect(() => {
