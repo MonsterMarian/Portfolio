@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import HomeAnimations from './components/HomeAnimations'
@@ -21,8 +21,6 @@ function App() {
     return saved !== null ? parseInt(saved, 10) : DEFAULT_POSITION;
   });
   const [menuOpen, setMenuOpen] = useState(false);
-  const [inverted, setInverted] = useState(false);
-  const invertIntervalRef = useRef(null);
   const location = useLocation();
 
   const maxSlider = states.length - 1;
@@ -60,23 +58,7 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [maxSlider]);
 
-  useEffect(() => {
-    if (sliderValue === maxSlider) {
-      setInverted(true);
-      invertIntervalRef.current = setInterval(() => {
-        setInverted(prev => !prev);
-      }, 250);
-    } else {
-      setInverted(false);
-      if (invertIntervalRef.current) {
-        clearInterval(invertIntervalRef.current);
-        invertIntervalRef.current = null;
-      }
-    }
-    return () => {
-      if (invertIntervalRef.current) clearInterval(invertIntervalRef.current);
-    };
-  }, [sliderValue, maxSlider]);
+  const isMax = sliderValue === maxSlider;
 
   const remaining = states.length - sliderValue;
   const activeAnimation = remaining <= 9 ? 10 - remaining : 0;
@@ -86,7 +68,7 @@ function App() {
   const isHome = location.pathname === '/';
 
   return (
-    <div className={isHome ? `app home ${inverted ? 'invert' : ''}` : 'app'} id="app-root">
+    <div className={isHome ? `app home${isMax ? ' is-max' : ''}` : 'app'} id="app-root">
       <Header
         menuOpen={menuOpen}
         onMenuToggle={() => setMenuOpen(!menuOpen)}

@@ -95,14 +95,32 @@ a {
   position: relative;
 }
 
-/* â”€â”€ INVERT / FLASHING STATE (Maximum Slider) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-.app.home.invert {
-  background-color: var(--accent-amber);
-  background-image: none;
-  color: var(--border-color);
+/* â”€â”€ IS-MAX / FLASHING STATE (Maximum Slider) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   Blikání je čistá CSS animace — žádné React re-rendery,
+   drag na slideru funguje bez přerušení.
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+@keyframes maxFlash {
+  0%, 49%  {
+    background-color: var(--accent-amber);
+    background-image: none;
+    color: var(--border-color);
+  }
+  50%, 100% {
+    background-color: var(--bg-dark);
+    background-image:
+      radial-gradient(var(--bg-card-light) 1.5px, transparent 1.5px),
+      radial-gradient(var(--bg-card-light) 1.5px, var(--bg-dark) 1.5px);
+    color: var(--text-light);
+  }
 }
 
-.app.home.invert .content-block__inner {
+.app.home.is-max {
+  animation: maxFlash 0.5s step-start infinite;
+}
+
+/* Prvky které se mění při is-max stavu */
+.app.home.is-max .content-block__inner {
   transform: scale(1.02);
 }
 
