@@ -12,6 +12,30 @@ function UspechyPage() {
       popis: 'Vývoj komplexní aplikace pro plánování akcí s vlastní databázovou architekturou a REST API.',
       tag: 'Projekt'
     },
+    {
+      rok: '—',
+      nazev: 'První maraton',
+      popis: 'Popis a fotka budou přidány později.',
+      tag: 'Sport'
+    },
+    {
+      rok: '—',
+      nazev: 'První zlatá medaile za běh',
+      popis: 'Popis a fotka budou přidány později.',
+      tag: 'Sport'
+    },
+    {
+      rok: '—',
+      nazev: 'Druhá zlatá medaile za běh',
+      popis: 'Popis a fotka budou přidány později.',
+      tag: 'Sport'
+    },
+    {
+      rok: '—',
+      nazev: 'Top 1.5% v šachu',
+      popis: 'Popis a fotka budou přidány později.',
+      tag: 'Šachy'
+    },
   ];
 
   return (
