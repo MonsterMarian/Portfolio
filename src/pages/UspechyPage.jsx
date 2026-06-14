@@ -31,10 +31,12 @@ function UspechyPage() {
       tag: 'Sport'
     },
     {
-      rok: '—',
-      nazev: 'Top 1.5% v šachu',
-      popis: 'Popis a fotka budou přidány později.',
-      tag: 'Šachy'
+      rok: '2026',
+      nazev: 'Top 1.5% v šachu (Elo 1648)',
+      popis: 'Dne 30. 1. 2026 jsem dosáhl maximálního ELO ratingu 1648 na Chess.com (98.5. percentil).',
+      tag: 'Šachy',
+      link: 'https://www.chess.com/member/mar1anmoon',
+      image: '/images/chess-rating.png'
     },
   ];
 
@@ -54,6 +56,20 @@ function UspechyPage() {
                   <span className="uspech-card__tag">{u.tag}</span>
                   <h2 className="uspech-card__title">{u.nazev}</h2>
                   <p className="uspech-card__desc">{u.popis}</p>
+                  
+                  {u.image && (
+                    <div className="uspech-card__image-container">
+                      <img src={u.image} alt={u.nazev} className="uspech-card__image" />
+                    </div>
+                  )}
+
+                  {u.link && (
+                    <div style={{ marginTop: '0.8em' }}>
+                      <a href={u.link} target="_blank" rel="noopener noreferrer" className="uspech-card__link">
+                        Zobrazit profil na Chess.com →
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
