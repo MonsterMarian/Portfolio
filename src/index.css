@@ -944,7 +944,8 @@ a {
 .uspech-card__desc { color: var(--text-muted); font-family: var(--font-serif); line-height: 1.6; font-size: 0.95em; margin: 0; }
 .uspech-card__link { display: inline-block; font-size: 0.9em; font-weight: 700; color: var(--accent-amber); text-decoration: underline; text-underline-offset: 4px; transition: color var(--transition-fast); }
 .uspech-card__link:hover { color: var(--text-light); }
-.uspech-card__image-container { margin-top: 1.2em; max-width: 100%; border: 4px solid #000; box-shadow: 6px 6px 0 #000; background: #000; overflow: hidden; display: inline-block; }
+.uspech-card__image-container { margin-top: 1.2em; max-width: 100%; overflow: hidden; display: inline-block; }
+
 .uspech-card__image { display: block; max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
 .uspech-card__images-container { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1.2em; }
 .uspech-card__images-container .uspech-card__image-container { margin-top: 0; flex: 1 1 180px; max-width: 250px; }
@@ -1608,8 +1609,9 @@ a {
 
 .uspech-card:hover .uspech-card__image-container,
 .projekt-stack-card:hover .uspech-card__image-container {
-  box-shadow: 6px 6px 0 #000, 0 0 0 2px var(--accent-amber);
+  box-shadow: none;
 }
+
 
 .uspech-card__image,
 .uspech-card__image-container img {
