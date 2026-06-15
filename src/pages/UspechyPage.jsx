@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 const uspechy = [
 
@@ -153,11 +154,12 @@ function UspechyPage() {
         </div>
       </div>
 
-      {/* Image Modal */}
-      {selectedImage && (
+      {/* Image Modal přes Portal */}
+      {selectedImage && createPortal(
         <div className="image-modal" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Expanded" />
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
