@@ -19,9 +19,9 @@ function UspechyPage() {
       tag: 'Sport'
     },
     {
-      rok: '—',
-      nazev: 'První zlatá medaile za běh',
-      popis: 'Popis a fotka budou přidány později.',
+      rok: '2026',
+      nazev: 'Běžecká výzva — 230 km',
+      popis: 'V prosinci 2026 jsem uběhl 230 km za 12 dní (11 půlmaratonů za sebou + jeden 10km den).',
       tag: 'Sport'
     },
     {
