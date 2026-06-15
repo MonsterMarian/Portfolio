@@ -80,6 +80,17 @@ function UspechyPage() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
   // Seřadit od nejnovějšího po nejstarší podle pole datum
   const sortedUspechy = [...uspechy].sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
