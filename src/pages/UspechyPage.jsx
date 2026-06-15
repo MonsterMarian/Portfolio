@@ -25,10 +25,13 @@ function UspechyPage() {
       tag: 'Sport'
     },
     {
-      rok: '—',
+      rok: '2023',
       nazev: 'Druhá zlatá medaile za běh',
-      popis: 'Popis a fotka budou přidány později.',
-      tag: 'Sport'
+      popis: 'Dne 31. 12. 2023 (na Silvestra) jsem získal zlato na silvestrovském běhu v Prostějově.',
+      tag: 'Sport',
+      link: 'http://ob.skprostejov.cz/silvestr.html',
+      linkText: 'Zobrazit výsledky závodu →',
+      image: '/images/silvestr-medaile.jpg'
     },
     {
       rok: '2026',
@@ -36,6 +39,7 @@ function UspechyPage() {
       popis: 'Dne 30. 1. 2026 jsem dosáhl maximálního ELO ratingu 1648 na Chess.com (98.5. percentil) a tím jsem zakončil svou čtyřletou šachovou cestu.',
       tag: 'Šachy',
       link: 'https://www.chess.com/member/mar1anmoon',
+      linkText: 'Zobrazit profil na Chess.com →',
       image: '/images/chess-rating.png'
     },
   ];
@@ -66,7 +70,7 @@ function UspechyPage() {
                   {u.link && (
                     <div style={{ marginTop: '0.8em' }}>
                       <a href={u.link} target="_blank" rel="noopener noreferrer" className="uspech-card__link">
-                        Zobrazit profil na Chess.com →
+                        {u.linkText || 'Více informací →'}
                       </a>
                     </div>
                   )}
