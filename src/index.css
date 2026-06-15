@@ -183,6 +183,10 @@ a {
   .wrapper { padding: 5.5em 2em 7em; }
 }
 
+@media (max-width: 480px) {
+  .wrapper { padding: 5em 1.2em 7em; }
+}
+
 /* â”€â”€ SITE HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .header-main {
   position: fixed;
@@ -205,6 +209,14 @@ a {
   text-transform: uppercase;
   letter-spacing: -0.03em;
   pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+  .header-main .site-title {
+    left: 1.2em;
+    font-size: 0.95em;
+    top: 1.6em;
+  }
 }
 
 .header-main .site-title a {
@@ -235,6 +247,13 @@ a {
   border: var(--border-width-thin) solid transparent;
   border-radius: 4px;
   transition: all var(--transition-fast);
+}
+
+@media (max-width: 480px) {
+  .header-main .menu-toggle {
+    right: 1.2em;
+    top: 1.3em;
+  }
 }
 
 .header-main .menu-open::after {
@@ -451,6 +470,11 @@ a {
   .content-card { padding: 2em; }
 }
 
+@media (max-width: 480px) {
+  #output { font-size: 1em; min-height: 14em; }
+  .content-card { padding: 1.2em; }
+}
+
 #output .red {
   color: var(--accent-amber);
   font-weight: 700;
@@ -509,6 +533,12 @@ a {
 
 @media (max-width: 768px) {
   .slider-wrap { padding: 1.5em 2em; }
+}
+
+@media (max-width: 480px) {
+  .slider-wrap { padding: 1.2em 1.2em; }
+  .slider-wrap .slider__scale { font-size: 0.85em; gap: 0.5em; }
+  .slider-wrap .slider__scale span { padding: 0.3em 0.5em; font-size: 0.9em; }
 }
 
 .slider-wrap .slider__scale {
@@ -972,6 +1002,12 @@ a {
   overflow: hidden;
 }
 .mde--open { transform: translateX(0); }
+
+@media (max-width: 480px) {
+  .mde { width: 100%; }
+  .mde__item { font-size: 1.6em; }
+  .mde__nav { padding: 1em 0 1em 1.5em; }
+}
 
 /* Ĺ ikmĂ˝ amber blok â€” dekorativnĂ­ */
 .mde__accent {
