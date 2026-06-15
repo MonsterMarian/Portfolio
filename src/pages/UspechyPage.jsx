@@ -13,9 +13,9 @@ function UspechyPage() {
       tag: 'Projekt'
     },
     {
-      rok: '—',
+      rok: '2025',
       nazev: 'První maraton',
-      popis: 'Popis a fotka budou přidány později.',
+      popis: 'Dne 4. 6. 2025 jsem úspěšně zaběhl svůj první maraton v čase pod 5 hodin.',
       tag: 'Sport'
     },
     {
