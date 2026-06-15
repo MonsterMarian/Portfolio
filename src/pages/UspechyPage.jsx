@@ -4,25 +4,29 @@ function UspechyPage() {
       rok: '2026',
       nazev: 'SPŠE Ječná — maturita',
       popis: 'Úspěšné zakončení studia na Střední průmyslové škole elektrotechnické Ječná v Praze.',
-      tag: 'Vzdělání'
+      tag: 'Vzdělání',
+      datum: '2026-06-01'
     },
     {
       rok: '2026',
       nazev: 'Region Beta Activity Planner',
       popis: 'Vývoj komplexní aplikace pro plánování akcí s vlastní databázovou architekturou a REST API.',
-      tag: 'Projekt'
+      tag: 'Projekt',
+      datum: '2026-05-01'
     },
     {
       rok: '2025',
       nazev: 'První maraton',
       popis: 'Dne 4. 6. 2025 jsem úspěšně zaběhl svůj první maraton v čase pod 5 hodin.',
-      tag: 'Sport'
+      tag: 'Sport',
+      datum: '2025-06-04'
     },
     {
       rok: '2026',
       nazev: 'Běžecká výzva — 230 km',
       popis: 'V prosinci 2026 jsem uběhl 230 km za 12 dní (11 půlmaratonů za sebou + jeden 10km den).',
-      tag: 'Sport'
+      tag: 'Sport',
+      datum: '2026-12-01'
     },
     {
       rok: '2023',
@@ -31,7 +35,8 @@ function UspechyPage() {
       tag: 'Sport',
       link: 'http://ob.skprostejov.cz/silvestr.html',
       linkText: 'Zobrazit výsledky závodu →',
-      image: '/images/silvestr-medaile.jpg'
+      image: '/images/silvestr-medaile.jpg',
+      datum: '2023-12-31'
     },
     {
       rok: '2026',
@@ -40,9 +45,13 @@ function UspechyPage() {
       tag: 'Šachy',
       link: 'https://www.chess.com/member/mar1anmoon',
       linkText: 'Zobrazit profil na Chess.com →',
-      image: '/images/chess-rating.png'
+      image: '/images/chess-rating.png',
+      datum: '2026-01-30'
     },
   ];
+
+  // Seřadit od nejnovějšího po nejstarší podle pole datum
+  const sortedUspechy = [...uspechy].sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
   return (
     <div className="page page--uspechy">
@@ -53,7 +62,7 @@ function UspechyPage() {
         </div>
         <div className="page__content">
           <div className="uspechy-list">
-            {uspechy.map((u, i) => (
+            {sortedUspechy.map((u, i) => (
               <div key={i} className="uspech-card">
                 <div className="uspech-card__year">{u.rok}</div>
                 <div className="uspech-card__body">
