@@ -22,11 +22,11 @@ function UspechyPage() {
       datum: '2025-06-04'
     },
     {
-      rok: '2026',
+      rok: '2025',
       nazev: 'Běžecká výzva — 230 km',
-      popis: 'V prosinci 2026 jsem uběhl 230 km za 12 dní (11 půlmaratonů za sebou + jeden 10km den).',
+      popis: 'V prosinci 2025 jsem uběhl 230 km za 12 dní (11 půlmaratonů za sebou + jeden 10km den).',
       tag: 'Sport',
-      datum: '2026-12-01'
+      datum: '2025-12-01'
     },
     {
       rok: '2023',
