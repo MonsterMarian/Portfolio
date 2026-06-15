@@ -33,7 +33,7 @@ function UspechyPage() {
     {
       rok: '2026',
       nazev: 'Top 1.5% v šachu (Elo 1648)',
-      popis: 'Dosáhnout ELO ratingu 1648 na Chess.com (98.5. percentil) se mi podařilo 30. 1. 2026 a úspěšně jsem tím zakončil svoji čtyřletou šachovou cestu.',
+      popis: 'Dne 30. 1. 2026 jsem dosáhl maximálního ELO ratingu 1648 na Chess.com (98.5. percentil) a tím jsem zakončil svou čtyřletou šachovou cestu.',
       tag: 'Šachy',
       link: 'https://www.chess.com/member/mar1anmoon',
       image: '/images/chess-rating.png'
