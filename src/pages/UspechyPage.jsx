@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const uspechy = [
 
@@ -62,6 +62,7 @@ const uspechy = [
 
 function UspechyPage() {
   const listRef = useRef(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const cards = listRef.current?.querySelectorAll('.uspech-card');
@@ -108,12 +109,19 @@ function UspechyPage() {
                     <div className="uspech-card__images-container">
                       {Array.isArray(u.image) ? (
                         u.image.map((imgUrl, imgIdx) => (
-                          <div key={imgIdx} className="uspech-card__image-container">
+                          <div 
+                            key={imgIdx} 
+                            className="uspech-card__image-container"
+                            onClick={() => setSelectedImage(imgUrl)}
+                          >
                             <img src={imgUrl} alt={`${u.nazev} - ${imgIdx}`} className="uspech-card__image" />
                           </div>
                         ))
                       ) : (
-                        <div className="uspech-card__image-container">
+                        <div 
+                          className="uspech-card__image-container"
+                          onClick={() => setSelectedImage(u.image)}
+                        >
                           <img src={u.image} alt={u.nazev} className="uspech-card__image" />
                         </div>
                       )}
@@ -133,6 +141,13 @@ function UspechyPage() {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="image-modal" onClick={() => setSelectedImage(null)}>
+          <img src={selectedImage} alt="Expanded" />
+        </div>
+      )}
     </div>
   );
 }
