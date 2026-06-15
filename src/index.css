@@ -916,6 +916,8 @@ a {
 .uspech-card__link:hover { color: var(--text-light); }
 .uspech-card__image-container { margin-top: 1.2em; max-width: 100%; border: 4px solid #000; box-shadow: 6px 6px 0 #000; background: #000; overflow: hidden; display: inline-block; }
 .uspech-card__image { display: block; max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+.uspech-card__images-container { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1.2em; }
+.uspech-card__images-container .uspech-card__image-container { margin-top: 0; flex: 1 1 180px; max-width: 250px; }
 
 /* â”€â”€ PROJEKTY PAGE (ZĂSOBNĂŤK / STACK) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .projekt-stack-list { display: flex; flex-direction: column; gap: 1.5em; }

@@ -35,7 +35,11 @@ function UspechyPage() {
       tag: 'Sport',
       link: 'http://ob.skprostejov.cz/silvestr.html',
       linkText: 'Zobrazit výsledky závodu →',
-      image: '/images/silvestr-medaile.jpg',
+      image: [
+        '/images/silvestr-portret.jpg',
+        '/images/silvestr-beh.jpg',
+        '/images/silvestr-medaile.jpg'
+      ],
       datum: '2023-12-31'
     },
     {
@@ -71,8 +75,18 @@ function UspechyPage() {
                   <p className="uspech-card__desc">{u.popis}</p>
                   
                   {u.image && (
-                    <div className="uspech-card__image-container">
-                      <img src={u.image} alt={u.nazev} className="uspech-card__image" />
+                    <div className="uspech-card__images-container">
+                      {Array.isArray(u.image) ? (
+                        u.image.map((imgUrl, imgIdx) => (
+                          <div key={imgIdx} className="uspech-card__image-container">
+                            <img src={imgUrl} alt={`${u.nazev} - ${imgIdx}`} className="uspech-card__image" />
+                          </div>
+                        ))
+                      ) : (
+                        <div className="uspech-card__image-container">
+                          <img src={u.image} alt={u.nazev} className="uspech-card__image" />
+                        </div>
+                      )}
                     </div>
                   )}
 
