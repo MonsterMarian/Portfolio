@@ -12,7 +12,8 @@ function UspechyPage() {
       nazev: 'Region Beta Activity Planner',
       popis: 'Vývoj komplexní aplikace pro plánování akcí s vlastní databázovou architekturou a REST API.',
       tag: 'Projekt',
-      datum: '2026-05-01'
+      datum: '2026-05-01',
+      image: '/images/region-beta.png'
     },
     {
       rok: '2025',

@@ -5,6 +5,7 @@ import HomeAnimations from './components/HomeAnimations'
 import ContentBlock from './components/ContentBlock'
 import SliderWrap from './components/SliderWrap'
 import MenuDrawerE from './components/MenuDrawerE'
+import AmbientEffects from './components/AmbientEffects'
 import states from './data/states'
 
 // Pages
@@ -91,6 +92,7 @@ function App() {
 
   return (
     <div ref={appRef} className={isHome ? 'app home' : 'app'} id="app-root">
+      <AmbientEffects />
       <Header
         menuOpen={menuOpen}
         onMenuToggle={() => setMenuOpen(!menuOpen)}

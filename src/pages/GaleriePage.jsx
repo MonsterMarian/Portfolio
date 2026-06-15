@@ -17,7 +17,8 @@ const projekty = [
     popis: 'Webová aplikace pro správu a plánování akcí. Vlastní databázová architektura, autentizace uživatelů, REST API.',
     github: 'https://regionbeta.onrender.com/',
     datum: '12 / 2024',
-    komentar: 'Moje první velká webová aplikace v Javě. Zde jsem se naučil základy relačních databází, návrhové vzory a jak postavit robustní backend API.'
+    komentar: 'Moje první velká webová aplikace v Javě. Zde jsem se naučil základy relačních databází, návrhové vzory a jak postavit robustní backend API.',
+    image: '/images/region-beta.png'
   },
   {
     id: 5,
@@ -73,6 +74,13 @@ function GaleriePage() {
                   {p.komentar && (
                     <div className="projekt-stack-card__comment">
                       <strong>Komentář:</strong> <em>{p.komentar}</em>
+                    </div>
+                  )}
+                  {p.image && (
+                    <div className="uspech-card__images-container">
+                      <div className="uspech-card__image-container">
+                        <img src={p.image} alt={p.nazev} className="uspech-card__image" />
+                      </div>
                     </div>
                   )}
                   <a href={p.github} target="_blank" rel="noopener noreferrer" className="projekt-stack-card__link">

@@ -1158,3 +1158,295 @@ a {
 }
 .mde__address a { color: var(--accent-amber); text-decoration: underline; }
 .mde__address a:hover { color: var(--text-light); }
+
+/* ══════════════════════════════════════════════════════════════
+   GLOBÁLNÍ MOBILNÍ OPRAVY — přidány pro plnou responzivitu
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Header na telefonech ──────────────────────────────────────── */
+@media (max-width: 480px) {
+  .header-main .site-title {
+    left: 1.2em;
+    font-size: 0.95em;
+    top: 1.6em;
+  }
+
+  .header-main .menu-toggle {
+    right: 1.2em;
+    top: 1.3em;
+  }
+}
+
+/* ── Wrapper padding ───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .wrapper { padding: 5em 1.2em 7em; }
+}
+
+/* ── Content card ──────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  #output { font-size: 1em; min-height: 14em; }
+  .content-card { padding: 1.2em; }
+}
+
+/* ── Slider ────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .slider-wrap { padding: 1.2em 1.2em; }
+  .slider-wrap .slider__scale { font-size: 0.85em; gap: 0.5em; }
+  .slider-wrap .slider__scale span { padding: 0.3em 0.5em; }
+}
+
+/* ── Page base ─────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .page__wrapper { padding: 1.5em 1.1em 3em; }
+  .page__header h1 { font-size: 1.9em; }
+  .page__subtitle { font-size: 0.95em; }
+}
+
+/* ── GitHub page ───────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .github-cta { font-size: 1em; padding: 1em 1.2em; gap: 0.7em; }
+  .github-cta svg { width: 32px; height: 32px; flex-shrink: 0; }
+  .github-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Úspěchy page ──────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .uspech-card { grid-template-columns: 3.5em 1fr; }
+  .uspech-card__body { padding: 1em 1em; }
+  .uspech-card__title { font-size: 1em; }
+  .uspech-card__year { font-size: 0.8em; }
+  .uspech-card__images-container { gap: 0.6em; }
+  .uspech-card__images-container .uspech-card__image-container { flex: 1 1 130px; max-width: 100%; }
+  .uspech-card__image { max-height: 180px; }
+}
+
+/* ── Projekty page ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .projekt-stack-card { grid-template-columns: 3.5em 1fr; }
+  .projekt-stack-card__date { font-size: 0.75em; }
+  .projekt-stack-card__body { padding: 1em 1em; gap: 0.6em; }
+  .projekt-stack-card__title { font-size: 1.05em; }
+  .projekt-stack-card__comment { font-size: 0.85em; }
+}
+
+/* ── MDE menu na celou šířku malých telefonů ──────────────────── */
+@media (max-width: 480px) {
+  .mde { width: 100%; }
+  .mde__item { font-size: 1.6em; }
+  .mde__nav { padding: 1em 0 1em 1.5em; }
+}
+
+/* ── Page header h1 velikost ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .page__header h1 { font-size: 2.5em; }
+}
+
+/* ── Zajistit overflow-x skrytí na hlavní app ──────────────────── */
+.app {
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  .home-animation img {
+    max-width: 90vw;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   AMBIENT AFTER EFFECTS
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Cursor Glow ─────────────────────────────────────────────
+   Jemný amber svit sledující kurzor na home stránce.
+   Poloha je nastavena přes JS (translate transform).
+   ─────────────────────────────────────────────────────────────── */
+.ambient-cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    oklch(80% 0.17 72 / 0.10) 0%,
+    oklch(80% 0.17 72 / 0.04) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 5;
+  will-change: transform;
+  /* Starts off-screen until first mouse move */
+  transform: translate(-9999px, -9999px);
+}
+
+/* ── 2. Scan-lines CRT overlay ──────────────────────────────────
+   Subtilní horizontální pruhy jako starý monitor.
+   Jen jemný, nepřekáží.
+   ─────────────────────────────────────────────────────────────── */
+.ambient-scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.07) 3px,
+    rgba(0, 0, 0, 0.07) 4px
+  );
+  /* Jemná animace pohybu řádků pro živost */
+  animation: scanMove 8s linear infinite;
+}
+
+@keyframes scanMove {
+  from { background-position: 0 0; }
+  to   { background-position: 0 40px; }
+}
+
+/* ── 3. Noise / Grain texture ───────────────────────────────────
+   SVG-based noise překrytý přes celou stránku.
+   Dává hloubku a "premium tisk" pocit.
+   ─────────────────────────────────────────────────────────────── */
+.ambient-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  /* Jemná animace pro "živý" efekt */
+  animation: grainShift 0.5s steps(1) infinite;
+}
+
+@keyframes grainShift {
+  0%   { background-position: 0px 0px; }
+  20%  { background-position: -30px 10px; }
+  40%  { background-position: 20px -15px; }
+  60%  { background-position: -10px 25px; }
+  80%  { background-position: 35px -5px; }
+  100% { background-position: 0px 0px; }
+}
+
+/* ── 4. Page route transition ───────────────────────────────────
+   Třídy přidávané ReactTransitionGroup nebo CSS na .page
+   pro jemný fade + posun při přechodu.
+   ─────────────────────────────────────────────────────────────── */
+.page {
+  animation: pageIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── 5. Card 3D hover tilt ──────────────────────────────────────
+   Jemný 3D perspektivní náklon karet při hoveru.
+   Nastaveno přes CSS — JS parallax jen pro cursor glow.
+   ─────────────────────────────────────────────────────────────── */
+.content-card {
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
+.content-card:hover {
+  transform: perspective(800px) rotateX(1.5deg) rotateY(-1.5deg) translateY(-2px);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease,
+    background-color var(--transition-normal);
+}
+
+/* Karty na ostatních stránkách */
+.github-stat-card,
+.uspech-card,
+.projekt-stack-card {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.github-stat-card:hover {
+  transform: translate(-3px, -3px) perspective(600px) rotateX(2deg);
+  box-shadow: 7px 7px 0 #000;
+}
+
+/* ── 6. Stagger in pro karty na stránkách ───────────────────────
+   Každá karta přijde s mírným zpožděním.
+   ─────────────────────────────────────────────────────────────── */
+.uspechy-list .uspech-card,
+.projekt-stack-list .projekt-stack-card,
+.github-stats .github-stat-card {
+  animation: cardStaggerIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.uspechy-list .uspech-card:nth-child(1),
+.projekt-stack-list .projekt-stack-card:nth-child(1),
+.github-stats .github-stat-card:nth-child(1) { animation-delay: 0.05s; }
+
+.uspechy-list .uspech-card:nth-child(2),
+.projekt-stack-list .projekt-stack-card:nth-child(2),
+.github-stats .github-stat-card:nth-child(2) { animation-delay: 0.12s; }
+
+.uspechy-list .uspech-card:nth-child(3),
+.projekt-stack-list .projekt-stack-card:nth-child(3),
+.github-stats .github-stat-card:nth-child(3) { animation-delay: 0.19s; }
+
+.uspechy-list .uspech-card:nth-child(4),
+.projekt-stack-list .projekt-stack-card:nth-child(4),
+.github-stats .github-stat-card:nth-child(4) { animation-delay: 0.26s; }
+
+.uspechy-list .uspech-card:nth-child(n+5),
+.projekt-stack-list .projekt-stack-card:nth-child(n+5) { animation-delay: 0.33s; }
+
+@keyframes cardStaggerIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── 7. Amber accent blink na aktivním slider handle ────────────
+   Jemný pulz na slideru připomínající "živý" prvek.
+   ─────────────────────────────────────────────────────────────── */
+.rangeslider__handle {
+  animation: handlePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes handlePulse {
+  0%, 100% { box-shadow: 3px 3px 0 var(--border-color); }
+  50%       { box-shadow: 3px 3px 0 var(--border-color), 0 0 12px oklch(80% 0.17 72 / 0.35); }
+}
+
+/* ── Respektuj reduced-motion ───────────────────────────────────
+   Všechny animace vypneme pokud uživatel preferuje klid.
+   ─────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .ambient-scanlines,
+  .ambient-grain,
+  .ambient-cursor-glow,
+  .rangeslider__handle {
+    animation: none !important;
+  }
+  .page,
+  .uspechy-list .uspech-card,
+  .projekt-stack-list .projekt-stack-card,
+  .github-stats .github-stat-card {
+    animation: none !important;
+  }
+  .content-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
