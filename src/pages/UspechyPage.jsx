@@ -12,10 +12,13 @@ const uspechy = [
     {
       rok: '2026',
       nazev: 'Region Beta Activity Planner',
-      popis: 'Vývoj komplexní webové aplikace pro plánování cílů a návyků, postavené na Next.js a Reactu.',
+      popis: 'Vývoj komplexní webové aplikace pro plánování cílů a návyků, postavené na Next.js a Reactu. Dne 22. dubna 2026 jsem tento projekt odprezentoval na žákovském veletrhu.',
       tag: 'Projekt',
       datum: '2026-05-01',
-      image: '/images/region-beta.png'
+      image: [
+        '/images/region-beta.png',
+        '/images/region-beta-veletrh.png'
+      ]
     },
     {
       rok: '2025',
