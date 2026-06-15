@@ -948,6 +948,9 @@ a {
 .uspech-card__image { display: block; max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
 .uspech-card__images-container { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1.2em; }
 .uspech-card__images-container .uspech-card__image-container { margin-top: 0; flex: 1 1 180px; max-width: 250px; }
+.uspech-card__images-container .uspech-card__image-container:only-child { max-width: 600px; flex: 1 1 100%; }
+.uspech-card__images-container .uspech-card__image-container:only-child .uspech-card__image { max-height: 420px; }
+
 
 /* â”€â”€ PROJEKTY PAGE (ZĂSOBNĂŤK / STACK) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .projekt-stack-list { display: flex; flex-direction: column; gap: 1.5em; }
@@ -1218,6 +1221,8 @@ a {
   .uspech-card__images-container { gap: 0.6em; }
   .uspech-card__images-container .uspech-card__image-container { flex: 1 1 130px; max-width: 100%; }
   .uspech-card__image { max-height: 180px; }
+  .uspech-card__images-container .uspech-card__image-container:only-child .uspech-card__image { max-height: 240px; }
+
 }
 
 /* ── Projekty page ─────────────────────────────────────────────── */
