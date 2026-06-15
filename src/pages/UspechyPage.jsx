@@ -65,6 +65,17 @@ function UspechyPage() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
+  useEffect(() => {
     const cards = listRef.current?.querySelectorAll('.uspech-card');
     if (!cards) return;
     const observer = new IntersectionObserver(
@@ -79,17 +90,6 @@ function UspechyPage() {
     cards.forEach((c) => observer.observe(c));
     return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    if (selectedImage) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [selectedImage]);
 
   // Seřadit od nejnovějšího po nejstarší podle pole datum
   const sortedUspechy = [...uspechy].sort((a, b) => new Date(b.datum) - new Date(a.datum));
