@@ -27,7 +27,7 @@ function UspechyPage() {
     {
       rok: '2023',
       nazev: 'Druhá zlatá medaile za běh',
-      popis: 'Dne 31. 12. 2023 (na Silvestra) jsem získal zlato na silvestrovském běhu v Prostějově.',
+      popis: 'Dne 31. 12. 2023 (na Silvestra) jsem získal zlato na silvestrovském běhu v Prostějově. Trať o délce 3300 metrů jsem zdolal v čase 13:17.',
       tag: 'Sport',
       link: 'http://ob.skprostejov.cz/silvestr.html',
       linkText: 'Zobrazit výsledky závodu →',
