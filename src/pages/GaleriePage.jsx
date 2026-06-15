@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+
 
 const projekty = [
   {
@@ -50,6 +52,24 @@ const projekty = [
 ];
 
 function GaleriePage() {
+  const listRef = useRef(null);
+
+  useEffect(() => {
+    const cards = listRef.current?.querySelectorAll('.projekt-stack-card');
+    if (!cards) return;
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      }),
+      { threshold: 0.12 }
+    );
+    cards.forEach((c) => observer.observe(c));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="page page--galerie">
       <div className="page__wrapper">
@@ -59,14 +79,16 @@ function GaleriePage() {
           <p className="page__subtitle">Vizuální přehled projektů</p>
         </div>
         <div className="page__content">
-          <div className="projekt-stack-list">
-            {projekty.map((p) => (
-              <div key={p.id} className="projekt-stack-card">
-                <div className="projekt-stack-card__date">{p.datum}</div>
+          <div className="projekt-stack-list" ref={listRef}>
+            {projekty.map((p, i) => (
+              <div key={p.id} className="projekt-stack-card" style={{ '--card-index': i }}>
+                <div className="projekt-stack-card__date">
+                  <span className="date-inner">{p.datum}</span>
+                </div>
                 <div className="projekt-stack-card__body">
                   <div className="projekt-stack-card__tech">
-                    {p.tech.map((t) => (
-                      <span key={t} className="projekt-stack-card__tech-tag">{t}</span>
+                    {p.tech.map((t, ti) => (
+                      <span key={t} className="projekt-stack-card__tech-tag" style={{ '--tag-i': ti }}>{t}</span>
                     ))}
                   </div>
                   <h2 className="projekt-stack-card__title">{p.nazev}</h2>
@@ -84,7 +106,8 @@ function GaleriePage() {
                     </div>
                   )}
                   <a href={p.github} target="_blank" rel="noopener noreferrer" className="projekt-stack-card__link">
-                    {p.github.includes('github.com') ? 'GitHub' : 'Otevřít projekt'} →
+                    <span className="link-text">{p.github.includes('github.com') ? 'GitHub' : 'Otevřít projekt'}</span>
+                    <span className="link-arrow">→</span>
                   </a>
                 </div>
               </div>
@@ -97,3 +120,4 @@ function GaleriePage() {
 }
 
 export default GaleriePage;
+
