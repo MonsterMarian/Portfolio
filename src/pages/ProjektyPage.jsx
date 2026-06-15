@@ -14,11 +14,11 @@ const projekty = [
   {
     id: 1,
     nazev: 'Region Beta Activity Planner',
-    tech: ['Java', 'SQL', 'REST API'],
-    popis: 'Webová aplikace pro správu a plánování akcí. Vlastní databázová architektura, autentizace uživatelů, REST API.',
+    tech: ['Next.js 14', 'React 18', 'TailwindCSS'],
+    popis: 'Komplexní aplikace propojující běžné úkoly, návyky, časově omezené výzvy a dlouhodobé cíle do jednoho funkčního celku.',
     github: 'https://regionbeta.onrender.com/',
     datum: '4-5 / 2026',
-    komentar: 'Moje první velká webová aplikace v Javě. Zde jsem se naučil základy relačních databází, návrhové vzory a jak postavit robustní backend API.',
+    komentar: 'Napsal jsem tento nástroj, protože mě štvalo, jak mi běžné to-do aplikace neukazují souvislosti mezi dnešní rutinou a dlouhodobými cíli. Využívá moderní frontend stack (Radix UI, Dnd-kit, Recharts).',
     image: '/images/region-beta.png'
   },
   {
@@ -108,7 +108,6 @@ function ProjektyPage() {
                   )}
                   <a href={p.github} target="_blank" rel="noopener noreferrer" className="projekt-stack-card__link">
                     <span className="link-text">{p.github.includes('github.com') ? 'GitHub' : 'Otevřít projekt'}</span>
-                    <span className="link-arrow">→</span>
                   </a>
                 </div>
               </div>

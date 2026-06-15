@@ -12,7 +12,7 @@ const uspechy = [
     {
       rok: '2026',
       nazev: 'Region Beta Activity Planner',
-      popis: 'Vývoj komplexní aplikace pro plánování akcí s vlastní databázovou architekturou a REST API.',
+      popis: 'Vývoj komplexní webové aplikace pro plánování cílů a návyků, postavené na Next.js a Reactu.',
       tag: 'Projekt',
       datum: '2026-05-01',
       image: '/images/region-beta.png'
@@ -37,7 +37,7 @@ const uspechy = [
       popis: 'Na Silvestra 23 jsem získal zlato na prostějovské trati o délce 3300m za 13:17.',
       tag: 'Sport',
       link: 'http://ob.skprostejov.cz/silvestr.html',
-      linkText: 'Zobrazit výsledky závodu →',
+      linkText: 'Zobrazit výsledky závodu',
       image: [
         '/images/silvestr-portret.jpg',
         '/images/silvestr-beh.jpg',
@@ -51,7 +51,7 @@ const uspechy = [
       popis: 'Dne 30. 1. 2026 jsem dosáhl maximálního ELO ratingu 1648 na Chess.com (98.5. percentil) a tím jsem zakončil svou čtyřletou šachovou cestu.',
       tag: 'Šachy',
       link: 'https://www.chess.com/member/mar1anmoon',
-      linkText: 'Zobrazit profil na Chess.com →',
+      linkText: 'Zobrazit profil na Chess.com',
       image: '/images/chess-rating.png',
       datum: '2026-01-30'
     },
@@ -121,7 +121,6 @@ function UspechyPage() {
                     <div style={{ marginTop: '0.8em' }}>
                       <a href={u.link} target="_blank" rel="noopener noreferrer" className="uspech-card__link">
                         <span className="link-text">{u.linkText || 'Více informací'}</span>
-                        <span className="link-arrow">→</span>
                       </a>
                     </div>
                   )}
