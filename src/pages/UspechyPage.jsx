@@ -1,13 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-const TAG_ICONS = {
-  'Vzdělání': '🎓',
-  'Projekt': '💻',
-  'Sport': '🏃',
-  'Šachy': '♟️',
-};
+const uspechy = [
 
-  const uspechy = [
     {
       rok: '2026',
       nazev: 'SPŠE Ječná — maturita',
@@ -101,9 +95,9 @@ function UspechyPage() {
                 </div>
                 <div className="uspech-card__body">
                   <span className="uspech-card__tag">
-                    <span className="tag-icon">{TAG_ICONS[u.tag] ?? '⭐'}</span>
                     {u.tag}
                   </span>
+
                   <h2 className="uspech-card__title">{u.nazev}</h2>
                   <p className="uspech-card__desc">{u.popis}</p>
 

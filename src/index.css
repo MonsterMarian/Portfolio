@@ -1565,20 +1565,11 @@ a {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.uspech-card:hover .uspech-card__year {
-  animation: yearPulse 1.2s ease-in-out infinite;
-}
-
-@keyframes yearPulse {
-  0%, 100% { background: var(--accent-amber); }
-  50%       { background: oklch(88% 0.18 72); }
-}
-
 .uspech-card:hover .year-inner {
   transform: scaleY(1.06);
 }
 
-/* ── Tag badge — ikona + hover scale ────────────────────────────*/
+/* ── Tag badge — hover scale ────────────────────────────*/
 .uspech-card__tag {
   display: inline-flex;
   align-items: center;
@@ -1586,15 +1577,6 @@ a {
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.tag-icon {
-  font-size: 1em;
-  display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.uspech-card:hover .tag-icon {
-  transform: scale(1.3) rotate(-8deg);
-}
 
 .uspech-card:hover .uspech-card__tag {
   color: oklch(88% 0.15 72);
