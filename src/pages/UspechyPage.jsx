@@ -1,4 +1,12 @@
-function UspechyPage() {
+import { useEffect, useRef } from 'react';
+
+const TAG_ICONS = {
+  'Vzdělání': '🎓',
+  'Projekt': '💻',
+  'Sport': '🏃',
+  'Šachy': '♟️',
+};
+
   const uspechy = [
     {
       rok: '2026',
@@ -55,6 +63,25 @@ function UspechyPage() {
     },
   ];
 
+function UspechyPage() {
+  const listRef = useRef(null);
+
+  useEffect(() => {
+    const cards = listRef.current?.querySelectorAll('.uspech-card');
+    if (!cards) return;
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      }),
+      { threshold: 0.1 }
+    );
+    cards.forEach((c) => observer.observe(c));
+    return () => observer.disconnect();
+  }, []);
+
   // Seřadit od nejnovějšího po nejstarší podle pole datum
   const sortedUspechy = [...uspechy].sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
@@ -66,15 +93,20 @@ function UspechyPage() {
           <p className="page__subtitle">Co jsem zatím stihl</p>
         </div>
         <div className="page__content">
-          <div className="uspechy-list">
+          <div className="uspechy-list" ref={listRef}>
             {sortedUspechy.map((u, i) => (
-              <div key={i} className="uspech-card">
-                <div className="uspech-card__year">{u.rok}</div>
+              <div key={i} className="uspech-card" style={{ '--card-index': i }}>
+                <div className="uspech-card__year">
+                  <span className="year-inner">{u.rok}</span>
+                </div>
                 <div className="uspech-card__body">
-                  <span className="uspech-card__tag">{u.tag}</span>
+                  <span className="uspech-card__tag">
+                    <span className="tag-icon">{TAG_ICONS[u.tag] ?? '⭐'}</span>
+                    {u.tag}
+                  </span>
                   <h2 className="uspech-card__title">{u.nazev}</h2>
                   <p className="uspech-card__desc">{u.popis}</p>
-                  
+
                   {u.image && (
                     <div className="uspech-card__images-container">
                       {Array.isArray(u.image) ? (
@@ -94,7 +126,8 @@ function UspechyPage() {
                   {u.link && (
                     <div style={{ marginTop: '0.8em' }}>
                       <a href={u.link} target="_blank" rel="noopener noreferrer" className="uspech-card__link">
-                        {u.linkText || 'Více informací →'}
+                        <span className="link-text">{u.linkText || 'Více informací'}</span>
+                        <span className="link-arrow">→</span>
                       </a>
                     </div>
                   )}

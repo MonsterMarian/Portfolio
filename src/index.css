@@ -1450,3 +1450,315 @@ a {
   }
 }
 
+/* ══════════════════════════════════════════════════════════════
+   PAGE MICRO EFFECTS — projekty, úspěchy, github
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Scroll reveal — karty přijdou zdola při scrollu ───────────
+   .is-visible se přidá přes IntersectionObserver v JSX.
+   ─────────────────────────────────────────────────────────────── */
+.projekt-stack-card,
+.uspech-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow var(--transition-fast);
+  transition-delay: calc(var(--card-index, 0) * 0.07s);
+}
+
+.projekt-stack-card.is-visible,
+.uspech-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Tech tagy — shimmer efekt při hoveru na celé kartě ─────────
+   Každý tag dostane mírné zpoždění podle --tag-i.
+   ─────────────────────────────────────────────────────────────── */
+.projekt-stack-card__tech-tag {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  transition-delay: calc(var(--tag-i, 0) * 0.04s);
+}
+
+.projekt-stack-card:hover .projekt-stack-card__tech-tag {
+  background: var(--bg-card-light);
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  transform: translateY(-1px);
+}
+
+.projekt-stack-card__tech-tag::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(80% 0.17 72 / 0.25),
+    transparent
+  );
+  transform: skewX(-15deg);
+  transition: left 0s;
+}
+
+.projekt-stack-card:hover .projekt-stack-card__tech-tag::after {
+  left: 200%;
+  transition: left 0.5s ease calc(var(--tag-i, 0) * 0.08s);
+}
+
+/* ── Datum sloupec — amber glow při hover na kartě ──────────────*/
+.projekt-stack-card__date {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.projekt-stack-card__date .date-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              letter-spacing 0.3s ease;
+}
+
+.projekt-stack-card:hover .projekt-stack-card__date {
+  background: oklch(80% 0.20 72);
+}
+
+.projekt-stack-card:hover .date-inner {
+  letter-spacing: 0.12em;
+  transform: scaleY(1.05);
+}
+
+/* ── Rok sloupec na úspěších — pulse efekt ──────────────────────*/
+.uspech-card__year {
+  position: relative;
+  overflow: hidden;
+}
+
+.uspech-card__year .year-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  writing-mode: vertical-rl;
+  font-weight: 800;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uspech-card:hover .uspech-card__year {
+  animation: yearPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes yearPulse {
+  0%, 100% { background: var(--accent-amber); }
+  50%       { background: oklch(88% 0.18 72); }
+}
+
+.uspech-card:hover .year-inner {
+  transform: scaleY(1.06);
+}
+
+/* ── Tag badge — ikona + hover scale ────────────────────────────*/
+.uspech-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.tag-icon {
+  font-size: 1em;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.uspech-card:hover .tag-icon {
+  transform: scale(1.3) rotate(-8deg);
+}
+
+.uspech-card:hover .uspech-card__tag {
+  color: oklch(88% 0.15 72);
+}
+
+/* ── Obrázky — zoom + border glow při hoveru ────────────────────*/
+.uspech-card__image-container,
+.projekt-stack-card .uspech-card__image-container {
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.uspech-card:hover .uspech-card__image-container,
+.projekt-stack-card:hover .uspech-card__image-container {
+  box-shadow: 6px 6px 0 #000, 0 0 0 2px var(--accent-amber);
+}
+
+.uspech-card__image,
+.uspech-card__image-container img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uspech-card:hover .uspech-card__image,
+.projekt-stack-card:hover .uspech-card__image {
+  transform: scale(1.05);
+}
+
+/* ── Link s animovanou šipkou ───────────────────────────────────
+   .link-text + .link-arrow struktura v JSX.
+   ─────────────────────────────────────────────────────────────── */
+.projekt-stack-card__link,
+.uspech-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  overflow: hidden;
+}
+
+.projekt-stack-card__link .link-arrow,
+.uspech-card__link .link-arrow {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.projekt-stack-card__link:hover .link-arrow,
+.uspech-card__link:hover .link-arrow {
+  transform: translateX(5px);
+}
+
+.projekt-stack-card__link .link-text,
+.uspech-card__link .link-text {
+  position: relative;
+}
+
+.projekt-stack-card__link .link-text::after,
+.uspech-card__link .link-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-amber);
+  transition: width 0.3s ease;
+}
+
+.projekt-stack-card__link:hover .link-text::after,
+.uspech-card__link:hover .link-text::after {
+  width: 100%;
+}
+
+/* ── Komentář blok — left border animace ────────────────────────*/
+.projekt-stack-card__comment {
+  position: relative;
+  border-left: 4px solid var(--accent-amber);
+  transition: border-left-width 0.2s ease, padding-left 0.2s ease;
+}
+
+.projekt-stack-card:hover .projekt-stack-card__comment {
+  border-left-width: 6px;
+  padding-left: calc(1em + 2px);
+}
+
+/* ── GitHub CTA — shimmer přes celý box ─────────────────────────*/
+.github-cta.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.github-cta.shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(94% 0.006 78 / 0.08),
+    transparent
+  );
+  transform: skewX(-15deg);
+  animation: ctaShimmer 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ctaShimmer {
+  0%   { left: -75%; }
+  60%  { left: 125%; }
+  100% { left: 125%; }
+}
+
+/* ── GitHub stat karty — border glow při hover ──────────────────*/
+.github-stat-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color 0.25s ease;
+}
+
+.github-stat-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  transition: border-color 0.25s ease;
+  pointer-events: none;
+}
+
+.github-stat-card:hover::after {
+  border-color: var(--accent-amber);
+}
+
+/* ── Page header h1 — dekorativní podtržení ─────────────────────*/
+.page__header h1 {
+  position: relative;
+  display: inline-block;
+}
+
+.page__header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--accent-amber);
+  animation: headerUnderline 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes headerUnderline {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ── reduced-motion doplněk pro nové efekty ─────────────────────*/
+@media (prefers-reduced-motion: reduce) {
+  .projekt-stack-card,
+  .uspech-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .github-cta.shimmer::before,
+  .page__header h1::after {
+    animation: none;
+  }
+  .page__header h1::after {
+    width: 100%;
+  }
+}
+
+
