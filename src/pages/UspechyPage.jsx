@@ -50,6 +50,18 @@ const uspechy = [
       datum: '2023-12-31'
     },
     {
+      rok: '2022',
+      nazev: 'Moje první medaile',
+      popis: 'Moje první medaile ze závodu. Byla to trasa o délce 4,5 km s 16 úkoly.',
+      tag: 'Sport',
+      image: [
+        '/images/medaile-vyhlaseni.jpg',
+        '/images/medaile-detail.jpg',
+        '/images/medaile-podium.jpg'
+      ],
+      datum: '2022-05-29'
+    },
+    {
       rok: '2026',
       nazev: 'Top 1.5% v šachu',
       popis: 'Dne 30. 1. 2026 jsem dosáhl maximálního ELO ratingu 1648 na Chess.com (98.5. percentil) a tím jsem zakončil svou čtyřletou šachovou cestu.',
