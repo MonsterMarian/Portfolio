@@ -27,7 +27,7 @@ const projekty = [
     tech: ['JavaScript', 'HTML5', 'CSS3'],
     popis: 'Interaktivní hra Piškvorky (Connect 5) s počítačovým protihráčem poháněným algoritmem Minimax a alfa-beta prořezáváním.',
     github: '/projects/connect5/index.html',
-    datum: '08 / 2024',
+    datum: '06 / 2025',
     komentar: 'Tento projekt mě velmi bavil, protože jsem si mohl v praxi vyzkoušet teorii her a optimalizaci vyhledávacího stromu v JavaScriptu.'
   },
   {
@@ -36,7 +36,7 @@ const projekty = [
     tech: ['JavaScript', 'HTML5', 'CSS3'],
     popis: 'Simulátor náhodných pokerových hand s pokročilou statistickou analýzou pravděpodobností kombinací v Texas Hold\'em.',
     github: '/projects/poker/index.html',
-    datum: '04 / 2024',
+    datum: '06 / 2025',
     komentar: 'Zaměřeno na matematické simulace a výpočty pravděpodobností. Užitečné pro pochopení chování náhody na velkém vzorku dat.'
   },
   {
@@ -45,7 +45,7 @@ const projekty = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     popis: 'Moderní a responzivní webová prezentace pro hudební skupinu obsahující informace o kapele, koncertech a e-shopu.',
     github: '/projects/kapela/index.html',
-    datum: '09 / 2023',
+    datum: '06 / 2025',
     komentar: 'Můj první reálný projekt pro klienta. Kladl jsem velký důraz na čistý kód bez frameworků a responzivní zobrazení na všech typech zařízení.'
   }
 ];
